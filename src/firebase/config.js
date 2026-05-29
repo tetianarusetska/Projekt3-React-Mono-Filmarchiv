@@ -2,9 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 
-export const auth = getAuth(app);
-export default app;
-
 const firebaseConfig = {
   apiKey: "AIzaSyADxi0Zp6pHMJxhyW08hZFBoHq4Zi2MYIM",
   authDomain: "fotoarchiv--mono.firebaseapp.com",

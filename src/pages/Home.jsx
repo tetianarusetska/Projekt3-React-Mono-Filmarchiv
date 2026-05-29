@@ -2,6 +2,7 @@
 
 import Lenis from 'lenis'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import Hero from "./Hero.jsx"
 import Intro from "./Intro.jsx"
@@ -29,6 +30,7 @@ export default function Home() {
             <Intro />
             <FooterIntro />
             <Footer />
+            <p>Here the <Link to="/login">Login</Link></p>
         </>
     );
 
