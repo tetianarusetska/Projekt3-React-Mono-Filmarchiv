@@ -12,12 +12,13 @@ export default function Hero() {
 
     const container = useRef();
 
-    const { scrollYProgress } = useScroll({
+    const { scrollYProgress } = useScroll({        //ein Hook von Framer Motion, er gibt ScrollYProgress zurück(0 sichtbar -> 1 verschnwindet)
         target: container,
-        offset: ["start end", 'end start']
+        offset: ["start end", 'end start']         //mit dem Parameter offset wird definiert wann den Messbereich begint und endet
     })
 
-    const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);  //wandelt den ScrollYProgress-Wert in einen CSS-Wert
+                                                                       //das Bild bewegt sich langsamer als die Seite scrollt
 
     return (
         <div
@@ -35,8 +36,8 @@ export default function Hero() {
             <div
                 className="fixed w-full h-full flex justify-center items-end pointer-events-none"
             >
-                <motion.div
-                    style={{ y }}
+                <motion.div                //ein spezieller div von Framer-Motion, die animierte Werte(y) direkt im Style-Prop akzeptiert
+                    style={{ y }}          //und perfomant auf der GPU rendert
                 >
                     <img
                         src="/images/img22.jpg"
