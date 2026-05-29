@@ -5,6 +5,8 @@ import { useEffect } from 'react'
 
 import Hero from "./Hero.jsx"
 import Intro from "./Intro.jsx"
+import Footer from "../components/footer/Footer.jsx"
+import FooterIntro from "../components/footer/FooterIntro.jsx"
 
 export default function Home() {
 
@@ -18,13 +20,15 @@ export default function Home() {
             requestAnimationFrame(raf) // nächsten Frame anfordern → Endlosschleife
         }
         requestAnimationFrame(raf) // Schleife starten
-    }, []) // [] = läuft nur einmal beim ersten Laden der Seite
+    }, [])
 
 
     return (
         <>
             <Hero />
             <Intro />
+            <FooterIntro />
+            <Footer />
         </>
     );
 

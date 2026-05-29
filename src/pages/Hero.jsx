@@ -23,7 +23,7 @@ export default function Hero() {
     return (
         <div
             ref={container}
-            style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+            style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}  //clipPath schneidet das Bild von unten nach oben weg
             className="w-screen h-screen flex flex-col gap-5"
         >
             <div

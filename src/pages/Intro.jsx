@@ -11,7 +11,7 @@ export default function Into() {
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger)    //ScrollTrigger-Plugin bei GSAP 
 
-        let ctx = gsap.context(() => {       //gsap.context() gruppiert alle Animationen — ermöglicht sauberes Aufräumen
+        let ctx = gsap.context(() => {       //gsap.context() gruppiert alle Animationen
 
             //Bild festpinnen: bleibt oben stehen, während man durch den Container scrollt
             ScrollTrigger.create({
@@ -22,27 +22,27 @@ export default function Into() {
                 end: "bottom bottom",           //Pinning endet, wenn Container unten den Viewport verlässt
             })
 
-            // Zoom-Animation: Bild vergrößert sich beim Scrollen von 1x auf 1.8x
+            //Zoom-Animation: Bild vergrößert sich beim Scrollen von 1x auf 1.8x
             gsap.to(imageContainer.current, {
-                scale: 1.8,                     // Endzoom (1 = normal, 1.8 = 80% größer)
-                ease: "none",                   // gleichmäßige Geschwindigkeit, kein Ein-/Ausblenden
+                scale: 1.8,                     //Endzoom (1 = normal, 1.8 = 80% größer)
+                ease: "none",                   //gleichmäßige Geschwindigkeit, kein Ein-/Ausblenden
                 scrollTrigger: {
-                    trigger: container.current, // Animation wird durch diesen Bereich gesteuert
-                    start: "top top",           // Zoom beginnt, wenn Container oben ankommt
-                    end: "bottom bottom",       // Zoom endet, wenn Container unten verlässt
-                    scrub: true,               // Animation ist direkt an die Scrollposition gekoppelt
+                    trigger: container.current, //Animation wird durch diesen Bereich gesteuert
+                    start: "top top",           //Zoom beginnt, wenn Container oben ankommt
+                    end: "bottom bottom",       //Zoom endet, wenn Container unten verlässt
+                    scrub: true,               //Animation ist direkt an die Scrollposition gekoppelt
                 }
             })
 
-            // Ausblend-Animation — Bild verschwindet am Ende des Containers von unten nach oben
+            //Ausblend-Animation — Bild verschwindet am Ende des Containers von unten nach oben
             gsap.to(imageContainer.current, {
-                clipPath: "inset(0% 0% 100% 0%)", // clipPath schneidet das Bild von unten nach oben weg
+                clipPath: "inset(0% 0% 100% 0%)", //clipPath schneidet das Bild von unten nach oben weg
                 ease: "none",
                 scrollTrigger: {
                     trigger: container.current,
-                    start: "75% bottom",         // Ausblenden beginnt, wenn 75% des Containers durchgescrollt sind
-                    end: "bottom bottom",       // endet wenn der Container vollständig aus dem Viewport gescrollt ist
-                    scrub: true,               // Animation direkt an Scrollposition gekoppelt
+                    start: "75% bottom",         //Ausblenden beginnt, wenn 75% des Containers durchgescrollt sind
+                    end: "bottom bottom",       //endet wenn der Container vollständig aus dem Viewport gescrollt ist
+                    scrub: true,               //Animation direkt an Scrollposition gekoppelt
                 }
             })
 
@@ -60,7 +60,7 @@ export default function Into() {
         >
             <div
                 ref={imageContainer}
-                style={{ clipPath: "inset(0% 0% 0% 0%)" }}
+                style={{ clipPath: "inset(0% 0% 0% 0%)" }}            //clipPath schneidet das Bild von unten nach oben weg
                 className="w-screen h-screen flex justify-center items-center"
             >
                 <img
