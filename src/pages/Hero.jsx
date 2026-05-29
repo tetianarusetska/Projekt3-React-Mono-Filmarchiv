@@ -4,9 +4,7 @@ import { useContext } from "react"
 
 import ThemeContext from "../contexts/modeContext.js"
 
-import Menu from "../components/Menu.jsx"
-import ModeButton from "../components/ModeButton.jsx"
-import Logo from "../components/Logo.jsx"
+import Header from "../components/Header.jsx"
 
 export default function Hero() {
 
@@ -26,13 +24,7 @@ export default function Hero() {
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}  //clipPath schneidet das Bild von unten nach oben weg
             className="w-screen h-screen flex flex-col gap-5"
         >
-            <div
-                className="flex flex-row gap-5"
-            >
-                <Logo />
-                <Menu />
-                <ModeButton />
-            </div>
+            <Header />
             <div
                 className="fixed w-full h-full flex justify-center items-end pointer-events-none"
             >

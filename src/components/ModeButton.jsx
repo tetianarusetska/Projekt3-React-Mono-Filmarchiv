@@ -9,7 +9,7 @@ export default function ModeButton() {
     return (
         <button
             onClick={toggleTheme}
-            className="bg-transparent border-0 p-0 m-0 outline-none shadow-none absolute top-10 right-15"
+            className="bg-transparent border-0 p-0 m-0 outline-none shadow-none absolute top-15 right-15"
         >
             <img
                 src={theme.name === "light" ? "/icons/light.svg" : "/icons/dark.svg"}
