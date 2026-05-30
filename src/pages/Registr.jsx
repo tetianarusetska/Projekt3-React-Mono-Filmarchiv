@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 import SignUp from "../components/SignUp.jsx"
 import Header from "../components/Header.jsx"
+import LogOutButton from "../components/LogOutButton.jsx"
 
 export default function Registr() {
     const { user } = useAuth();
@@ -26,7 +27,14 @@ export default function Registr() {
                     <h1 className="text-(--mainColor)">
                         Willkommen, {user.email}!
                     </h1>
-                    <Link to="/profile" className="underline">Zum Profil</Link>
+                    <div className="flex flex-row gap-3">
+                        <button
+                            className="p-3 mt-5 rounded-md w-42.5 h-10 flex items-center justify-center gap-2 text-(--mainColor) backdrop-blur-md bg-white/5 border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/10 hover:scale-[1.03] active:scale-[0.98]"
+                        >
+                            <Link to="/profile">Zum Profil</Link>
+                        </button>
+                        <LogOutButton />
+                    </div>
                 </div>
             </div>
         </div>

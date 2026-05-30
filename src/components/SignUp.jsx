@@ -16,9 +16,9 @@ export default function SignUp() {
 
         try {
             await createUserWithEmailAndPassword(auth, email, password);
-            console.log("Login erfolgreich!")
+            console.log("Anmeldung erfolgreich!")
         } catch (err) {
-            setError("Login fehlgeschlagen");
+            setError("Anmeldung fehlgeschlagen!");
         }
     }
 
@@ -59,7 +59,12 @@ export default function SignUp() {
                 <p className="text-center">Bereits registriert?<Link to="/login" className="m-1 underline">Anmelden</Link></p>
             </div>
 
-            {error && error}
+            {error && (
+                <p className="text-center">
+                    {error}
+                </p>
+            )}
+
         </form>
     );
 }

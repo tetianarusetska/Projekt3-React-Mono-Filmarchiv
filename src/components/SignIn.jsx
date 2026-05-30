@@ -18,7 +18,7 @@ export default function SignIn() {
             await signInWithEmailAndPassword(auth, email, password);
             console.log("Login erfolgreich!")
         } catch (err) {
-            setError("Login fehlgeschlagen");
+            setError("Login fehlgeschlagen!");
         }
     }
 
@@ -68,7 +68,12 @@ export default function SignIn() {
                 <p className="text-center">Noch kein Konto?<Link to="/registr" className="m-1 underline">Registrieren</Link></p>
             </div>
 
-            {error && error}
+            {error && (
+                <p className="text-center">
+                    {error}
+                </p>
+            )}
+            s
         </form>
     );
 }
