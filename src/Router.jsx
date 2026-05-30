@@ -2,7 +2,9 @@ import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home.jsx"
 
-import Auth from "./pages/Auth.jsx"
+import Login from "./pages/Login.jsx"
+import Registr from "./pages/Registr.jsx"
+import Profile from "./pages/Profile.jsx"
 
 export default function Router() {
 
@@ -12,7 +14,9 @@ export default function Router() {
 
         <Route path="/" element={<Home />} />
 
-        <Route path="/login" element={<Auth />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registr" element={<Registr />} />
+        <Route path="/profile" element={<Profile />} />
 
       </Routes>
     </>
