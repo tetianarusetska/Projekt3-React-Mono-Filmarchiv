@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import ThemeContext from "../contexts/modeContext.js";
+import ThemeContext from "../../contexts/modeContext.js";
 
 export default function ModeButton() {
 

@@ -1,9 +1,9 @@
-import { useAuth } from "../providers/AuthContext.jsx"
+import { useAuth } from "../../providers/AuthContext.jsx"
 import { Link } from "react-router-dom"
 
-import SignUp from "../components/SignUp.jsx"
-import Header from "../components/Header.jsx"
-import LogOutButton from "../components/LogOutButton.jsx"
+import SignUp from "../../components/login/SignUp.jsx"
+import Header from "../../components/header/Header.jsx"
+import LogOutButton from "../../components/login/LogOutButton.jsx"
 
 export default function Registr() {
     const { user } = useAuth();

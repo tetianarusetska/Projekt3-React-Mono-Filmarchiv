@@ -2,9 +2,9 @@ import { useRef } from "react"
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useContext } from "react"
 
-import ThemeContext from "../contexts/modeContext.js"
+import ThemeContext from "../../contexts/modeContext.js"
 
-import Header from "../components/Header.jsx"
+import Header from "../../components/header/Header.jsx"
 
 export default function Hero() {
 
@@ -36,9 +36,9 @@ export default function Hero() {
                         alt="Magnum Photos"
                         className="w-full h-[85vh] object-contain"
                     />
+                    {/* <p className="text-[20px] font-light font-[Untitled]">Henri Cartier-Bresson, "A farewell service for the late actor Danjuro held at the Aoyama Hills". Tokyo, Japan. 1965</p> */}
                 </motion.div>
             </div>
-
         </div>
     );
 }

@@ -2,7 +2,7 @@ import { useState, useRef, useLayoutEffect } from "react"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-export default function Into() {
+export default function FeaturedPhoto1() {
 
     const container = useRef(null);
     const imageContainer = useRef(null);
@@ -61,13 +61,14 @@ export default function Into() {
             <div
                 ref={imageContainer}
                 style={{ clipPath: "inset(0% 0% 0% 0%)" }}            //clipPath schneidet das Bild von unten nach oben weg
-                className="w-screen h-screen flex justify-center items-center"
+                className="w-screen h-screen flex flex-col justify-center items-center"
             >
                 <img
                     src="/images/img31.jpg"
                     alt="Magnum Photos"
                     className="w-[130vh] h-[85vh] object-contain"
                 />
+                {/* <p className="text-[20px] font-light font-[Untitled] mt-3">Henri Cartier-Bresson, "Muslim women on the slopes of Hanri Parball Hill,<br></br> praying toward the sun rising behind the Himalayas. Kashmir, India". 1948</p> */}
             </div>
 
         </div>

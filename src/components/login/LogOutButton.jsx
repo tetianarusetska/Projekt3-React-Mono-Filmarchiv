@@ -1,5 +1,5 @@
 import { signOut } from "firebase/auth"
-import { auth } from "../firebase/config.js"
+import { auth } from "../../firebase/config.js"
 
 
 export default function LogOutButton() {

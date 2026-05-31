@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { signInWithEmailAndPassword } from "firebase/auth"
-import { auth } from "../firebase/config.js"
+import { auth } from "../../firebase/config.js"
 import { Link } from "react-router-dom"
 
 export default function SignIn() {
@@ -73,7 +73,7 @@ export default function SignIn() {
                     {error}
                 </p>
             )}
-            s
+            
         </form>
     );
 }

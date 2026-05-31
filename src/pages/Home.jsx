@@ -4,8 +4,12 @@ import Lenis from 'lenis'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import Hero from "./Hero.jsx"
-import Intro from "./Intro.jsx"
+import Hero from "./homepage/Hero.jsx"
+
+import FeaturedPhoto1 from "./homepage/FeaturedPhoto1.jsx"
+import IntroText from './homepage/IntroText.jsx'
+import FeaturedPhoto2 from "./homepage/FeaturedPhoto2.jsx"
+
 import Footer from "../components/footer/Footer.jsx"
 import FooterIntro from "../components/footer/FooterIntro.jsx"
 
@@ -27,10 +31,12 @@ export default function Home() {
     return (
         <>
             <Hero />
-            <Intro />
+            <FeaturedPhoto1/>
+            <IntroText />
+            <FeaturedPhoto2/>
+
             <FooterIntro />
             <Footer />
-            <p>Here the <Link to="/login">Login</Link></p>
         </>
     );
 

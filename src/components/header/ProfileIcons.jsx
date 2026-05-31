@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import ThemeContext from "../contexts/modeContext.js"
-import { icons } from "../theme/profileIcons"
+import ThemeContext from "../../contexts/modeContext.js"
+import { icons } from "../../theme/profileIcons"
 import { Link } from "react-router-dom"
 
 export default function ProfileIcons() {
