@@ -10,7 +10,7 @@ export default function Photos() {
 
             try {
                 const response = await fetch(
-                    "https://api.unsplash.com/topics/film/photos?per_page=30&orientation=landscape",
+                    "https://api.unsplash.com/topics/film/photos?per_page=10&orientation=landscape",
                     {
                         headers: {
                             Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`,
@@ -24,8 +24,6 @@ export default function Photos() {
 
                 const data = await response.json();
                 console.log("Ergebnis:", data);
-
-                
 
                 setPhotos(data);
 

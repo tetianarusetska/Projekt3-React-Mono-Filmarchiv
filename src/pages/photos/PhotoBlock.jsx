@@ -2,6 +2,9 @@ import { useState, useRef, useLayoutEffect } from "react"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import { usePhoto } from "../../providers/PhotoModalProvider.jsx"
+
+
 export default function PhotoBlock({ photos }) {
 
     // selectedPhoto speichert den Index des aktuell angezeigten Fotos (startet bei 0)
@@ -9,6 +12,8 @@ export default function PhotoBlock({ photos }) {
 
     const container = useRef(null);
     const imageContainer = useRef(null);
+
+    const { openPhoto } = usePhoto()
 
     // 3 Animationen: das Bild wird gepinnt, gezoomt, ausgeblendet
     useLayoutEffect(() => {
@@ -55,7 +60,7 @@ export default function PhotoBlock({ photos }) {
         return () => ctx.revert()
 
     }, [photos])
-    
+
     return (
         <div ref={container} className="h-[200vh] w-screen">
 
@@ -64,10 +69,11 @@ export default function PhotoBlock({ photos }) {
                     <img
                         src={photos[selectedPhoto]?.urls?.regular}
                         alt={photos[selectedPhoto]?.alt_description}
-                        className="w-full h-screen object-contain"
+                        onClick={() => openPhoto(photos[selectedPhoto])}
+                        className="w-full h-screen object-contain cursor-pointer"
                     />
 
-                    <div className="absolute bottom-28 left-12 w-full z-10">
+                    <div className="absolute bottom-28 left-8 w-full z-10">
                         {photos.map((photo, index) => (
                             <div
                                 onMouseOver={() => setSelectedPhoto(index)}

@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom"
 import App from "./App.jsx"
 import ModeProvider from "./providers/ModeProvider.jsx"
 import { AuthProvider } from "./providers/AuthContext.jsx"
+import { PhotoModalProvider } from "./providers/PhotoModalProvider.jsx"
 
 import "./index.css"
 
@@ -12,9 +13,11 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <ModeProvider>
-        <AuthProvider>
-          <App />
-        </AuthProvider>
+        <PhotoModalProvider>
+          <AuthProvider>
+            <App />
+          </AuthProvider>
+        </PhotoModalProvider>
       </ModeProvider>
     </BrowserRouter>
   </StrictMode>
