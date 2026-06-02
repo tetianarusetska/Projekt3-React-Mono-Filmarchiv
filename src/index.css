@@ -21,7 +21,7 @@
 }
 
 @font-face {
-    font-family: "Le Murmure";
+    font-family: "LeMurmure";
     src: url("/fonts/murmure-main/fonts/le-murmure.ttf");
 }
 
@@ -41,7 +41,7 @@
 }
 
 @font-face {
-    font-family: "ABC Maxi";
+    font-family: "ABCMaxi";
     src: url("/fonts/ABC Maxi/ABC Maxi Plus Variable/.ABCMaxiPlusVariable-Trial.ttf");
 }
 
@@ -126,12 +126,12 @@
 }
 
 @font-face {
-    font-family: "Maelstrom_Sans";
+    font-family: "MaelstromSans";
     src: url("/fonts/test1otf/Test_Maelstrom_Collection/Test_Maelstrom_Sans/TestMaelstromSans-Bold.otf");
 }
 
 @font-face {
-    font-family: "Maelstrom_Bold";
+    font-family: "MaelstromBold";
     src: url("/fonts/test1otf/Test_Maelstrom_Collection/Test_Maelstrom/TestMaelstrom-Bold.otf");
 }
 
@@ -146,12 +146,12 @@
 }
 
 @font-face {
-    font-family: "Söhne_Schmal_Buch";
+    font-family: "SöhneSchmalBuch";
     src: url("/fonts/test1otf/Test_Söhne_Collection/Test_Söhne_Schmal/TestSöhneSchmal-Buch.otf");
 }
 
 @font-face {
-    font-family: "Söhne_Schmal_Leicht";
+    font-family: "SöhneSchmalLeicht";
     src: url("/fonts/test1otf/Test_Söhne_Collection/Test_Söhne_Schmal/TestSöhneSchmal-Extraleicht.otf");
 }
 

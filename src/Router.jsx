@@ -4,12 +4,19 @@ import Home from "./pages/Home.jsx"
 
 import Login from "./pages/login/Login.jsx"
 import Registr from "./pages/login/Registr.jsx"
-import Profile from "./pages/profile/Profile.jsx"
 
 import PhotosPage from "./pages/photos/PhotosPage.jsx"
 import Photographers from "./pages/photographers/Photographers.jsx"
 import Prints from "./pages/prints/Prints.jsx"
 import Articles from "./pages/articles/Articles.jsx"
+
+import Profile from "./pages/profile/Profile.jsx"
+import Favorites from "./pages/profile/Favorites.jsx"
+import Collections from "./pages/profile/Collections.jsx"
+
+import Impressum from "./pages/footer/Impressum.jsx"
+import Datenschutz from "./pages/footer/Datenschutz.jsx"
+import Contact from "./pages/footer/Contact.jsx"
 
 export default function Router() {
 
@@ -27,6 +34,15 @@ export default function Router() {
         <Route path="/fotografen" element={<Photographers />} />
         <Route path="/drucke" element={<Prints />} />
         <Route path="/artikel" element={<Articles />} />
+
+        <Route path="/profil" element={<Profile />} />
+        <Route path="/favoriten" element={<Favorites />} />
+        <Route path="/sammlungen" element={<Collections />} />
+
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+        <Route path="/kontakt" element={<Contact />} />
+       
 
       </Routes>
     </>
