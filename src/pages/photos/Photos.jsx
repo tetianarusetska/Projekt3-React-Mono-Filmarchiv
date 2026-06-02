@@ -1,57 +1,16 @@
-import { useState, useEffect } from "react"
+import { usePhotos } from "../../providers/PhotosProvider.jsx"
 import PhotoBlock from "./PhotoBlock"
 
 export default function Photos() {
 
-    const [photos, setPhotos] = useState([]);
+    const { photos, loading } = usePhotos();
 
-    useEffect(() => {
-        async function fetchPhotos() {
-
-            try {
-                const response = await fetch(
-                    "https://api.unsplash.com/topics/film/photos?per_page=10&orientation=landscape",
-                    {
-                        headers: {
-                            Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`,
-                        },
-                    }
-                );
-
-                if (!response.ok) {
-                    throw new Error(`HTTP-Fehler: ${response.status}`);
-                }
-
-                const data = await response.json();
-                console.log("Ergebnis:", data);
-
-                const detailedPhotos = await Promise.all(
-                    data.map(photo =>
-                        fetch(`https://api.unsplash.com/photos/${photo.id}`, {
-                            headers: {
-                                Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`,
-                            },
-                        }).then(r => r.json())
-                    )
-                );
-
-                setPhotos(detailedPhotos);
-
-            } catch (error) {
-                console.error("Fehler beim Fetch:", error);
-            }
-        }
-
-        fetchPhotos();
-    }, []);
-
+    if (loading) return <p>Laden...</p>
 
     const groups = [];
-
     for (let i = 0; i < photos.length; i += 5) {
         groups.push(photos.slice(i, i + 5));
     }
-
 
     return (
         <div>
