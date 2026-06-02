@@ -37,26 +37,23 @@ export default function PhotoModal() {
                 </div>
 
                 <div className="ml-5 py-6 font-[Untitled] text-(--mainColor) text-md">
-                    <p className="">
-                        Fotografie von {selectedPhoto?.user?.name}, {selectedPhoto?.user?.location}. | "{selectedPhoto?.alt_description}"
+                    <p className="mt-1">
+                        Fotografie von {selectedPhoto?.user?.name} | {selectedPhoto?.user?.location} | "{selectedPhoto?.alt_description}"
                     </p>
                     <p className="mt-1">
                         {selectedPhoto?.description}
                     </p>
-                    <div className='flex flex-row gap-25'>
-                        <div className='flex flex-row gap-7'>
-                            <p>{selectedPhoto?.likes} Likes</p>
-                            <p>{selectedPhoto?.views} Aufrufe</p>
-                            <p>{selectedPhoto?.downloads} Downloads</p>
-                        </div>
-                        <div className='flex flex-row gap-7'>
-                            <p>{selectedPhoto?.exif?.make}</p>
-                            <p>{selectedPhoto?.exif?.model}</p>
-                            <p>{selectedPhoto?.exif?.iso}</p>
-                            <p>{selectedPhoto?.exif?.focal_length}</p>
-                            <p>{selectedPhoto?.exif?.exposure_time}</p>
-                        </div>
-
+                    <div className='mt-1 flex flex-row gap-7'>
+                        <p>{selectedPhoto?.exif?.make}</p>
+                        <p>{selectedPhoto?.exif?.model}</p>
+                        <p>{selectedPhoto?.exif?.iso}</p>
+                        <p>{selectedPhoto?.exif?.focal_length}</p>
+                        <p>{selectedPhoto?.exif?.exposure_time}</p>
+                    </div>
+                    <div className='mt-1 flex flex-row gap-7'>
+                        <p>{selectedPhoto?.likes} Likes</p>
+                        <p>{selectedPhoto?.views} Aufrufe</p>
+                        <p>{selectedPhoto?.downloads} Downloads</p>
                     </div>
 
                     <a href={selectedPhoto?.user?.links?.html}

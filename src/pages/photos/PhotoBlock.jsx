@@ -77,6 +77,7 @@ export default function PhotoBlock({ photos }) {
                         {photos.map((photo, index) => (
                             <div
                                 onMouseOver={() => setSelectedPhoto(index)}
+                                onClick={() => openPhoto(photos[index])}
                                 key={photo.id}
                                 className="flex w-full font-bold text-[50px] text-(--mainColor) uppercase border-b border-(--mainColor) font-[Jacquard]"
                             >

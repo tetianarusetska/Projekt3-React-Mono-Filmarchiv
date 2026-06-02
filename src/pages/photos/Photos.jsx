@@ -25,7 +25,17 @@ export default function Photos() {
                 const data = await response.json();
                 console.log("Ergebnis:", data);
 
-                setPhotos(data);
+                const detailedPhotos = await Promise.all(
+                    data.map(photo =>
+                        fetch(`https://api.unsplash.com/photos/${photo.id}`, {
+                            headers: {
+                                Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`,
+                            },
+                        }).then(r => r.json())
+                    )
+                );
+
+                setPhotos(detailedPhotos);
 
             } catch (error) {
                 console.error("Fehler beim Fetch:", error);
