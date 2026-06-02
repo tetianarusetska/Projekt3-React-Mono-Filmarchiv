@@ -1,6 +1,6 @@
 import { usePhotos } from "../../providers/PhotosProvider.jsx"
 
-export default function Photographers() {
+export default function Photographers({ search }) {
 
     const { photos, loading } = usePhotos();
 
@@ -10,9 +10,14 @@ export default function Photographers() {
         photos.map(p => [p.user.username, p.user])
     ).values()];
 
+    const filteredPhotographers = photographers.filter(user =>
+        user.name?.toLowerCase().includes(search.toLowerCase()) ||
+        user.username?.toLowerCase().includes(search.toLowerCase())
+    );
+
     return (
         <div className="mt-20 grid grid-cols-3 gap-20">
-            {photographers.map(user => (
+            {filteredPhotographers.map(user => (
                 <div key={user.username} className="p-8 text-[20px] mx-10 flex flex-col justify-center gap-3 items-center font-[Fejoya] rounded-3xl border border-(--mainColor)">
                     <img
                         src={user.profile_image.large}
@@ -39,10 +44,10 @@ export default function Photographers() {
                     </a>
                     {user.instagram_username && (
                         <a href={`https://instagram.com/${user.instagram_username}`} target="_blank">
-                            @{user.instagram_username} | Instagram
+                            Instagram | @{user.instagram_username}
                         </a>
                     )}
-                    <p className="w-full px-4 text-center">{user.bio}</p>
+                    <p className="w-full px-4 text-center">"{user.bio}"</p>
                 </div>
             ))}
         </div>
