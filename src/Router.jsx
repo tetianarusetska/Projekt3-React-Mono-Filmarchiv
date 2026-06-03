@@ -13,7 +13,7 @@ import ArticlesPage from "./pages/articles/ArticlesPage.jsx"
 import ProfilePage from "./pages/profile/ProfilePage.jsx"
 import FillProfile from "./pages/profile/FillProfile.jsx"
 import FavoritesPage from "./pages/profile/FavoritesPage.jsx"
-import Collections from "./pages/profile/Collections.jsx"
+import CollectionsPage from "./pages/profile/CollectionsPage.jsx"
 
 import Impressum from "./pages/footer/Impressum.jsx"
 import Datenschutz from "./pages/footer/Datenschutz.jsx"
@@ -38,7 +38,7 @@ export default function Router() {
         <Route path="/profil" element={<ProfilePage />} />
         <Route path="/profil/bearbeiten" element={<FillProfile />} />
         <Route path="profil/favoriten" element={<FavoritesPage />} />
-        <Route path="profil/sammlungen" element={<Collections />} />
+        <Route path="profil/sammlungen" element={<CollectionsPage />} />
 
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
