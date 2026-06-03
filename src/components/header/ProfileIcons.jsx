@@ -8,7 +8,7 @@ export default function ProfileIcons() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Link to="/login">
+    <Link to="/anmeldung">
       <img
         src={icons[theme.name]}
         alt="Profile Icon"

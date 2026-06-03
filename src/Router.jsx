@@ -7,11 +7,12 @@ import Registr from "./pages/login/Registr.jsx"
 
 import PhotosPage from "./pages/photos/PhotosPage.jsx"
 import PhotographersPage from "./pages/photographers/PhotographersPage.jsx"
-import Prints from "./pages/prints/Prints.jsx"
-import Articles from "./pages/articles/Articles.jsx"
+import PrintsPage from "./pages/prints/PrintsPage.jsx"
+import ArticlesPage from "./pages/articles/ArticlesPage.jsx"
 
-import Profile from "./pages/profile/Profile.jsx"
-import Favorites from "./pages/profile/Favorites.jsx"
+import ProfilePage from "./pages/profile/ProfilePage.jsx"
+import FillProfile from "./pages/profile/FillProfile.jsx"
+import FavoritesPage from "./pages/profile/FavoritesPage.jsx"
 import Collections from "./pages/profile/Collections.jsx"
 
 import Impressum from "./pages/footer/Impressum.jsx"
@@ -26,18 +27,18 @@ export default function Router() {
 
         <Route path="/" element={<Home />} />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/registr" element={<Registr />} />
-        <Route path="/profile" element={<Profile />} />
-
+        <Route path="/anmeldung" element={<Login />} />
+        <Route path="/registrierung" element={<Registr />} />
+        
         <Route path="/fotos" element={<PhotosPage />} />
         <Route path="/fotografen" element={<PhotographersPage />} />
-        <Route path="/drucke" element={<Prints />} />
-        <Route path="/artikel" element={<Articles />} />
+        <Route path="/drucke" element={<PrintsPage />} />
+        <Route path="/artikel" element={<ArticlesPage />} />
 
-        <Route path="/profil" element={<Profile />} />
-        <Route path="/favoriten" element={<Favorites />} />
-        <Route path="/sammlungen" element={<Collections />} />
+        <Route path="/profil" element={<ProfilePage />} />
+        <Route path="/profil/bearbeiten" element={<FillProfile />} />
+        <Route path="profil/favoriten" element={<FavoritesPage />} />
+        <Route path="profil/sammlungen" element={<Collections />} />
 
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />

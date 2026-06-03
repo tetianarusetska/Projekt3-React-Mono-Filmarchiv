@@ -56,7 +56,7 @@ export default function SignUp() {
             </div>
 
             <div>
-                <p className="text-center">Bereits registriert?<Link to="/login" className="m-1 underline">Anmelden</Link></p>
+                <p className="text-center">Bereits registriert?<Link to="/anmeldung" className="m-1 underline">Anmelden</Link></p>
             </div>
 
             {error && (

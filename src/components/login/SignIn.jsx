@@ -65,7 +65,7 @@ export default function SignIn() {
             </div>
 
             <div>
-                <p className="text-center">Noch kein Konto?<Link to="/registr" className="m-1 underline">Registrieren</Link></p>
+                <p className="text-center">Noch kein Konto?<Link to="/registrierung" className="m-1 underline">Registrieren</Link></p>
             </div>
 
             {error && (

@@ -45,7 +45,7 @@ const Nav = () => {
                 <Link to="/sammlungen">Sammlungen</Link>
             </div>
             <div className='flex flex-col gap-2 font-[Fejoya] text-[26px] text-(--bgColor)'>
-                <h3 className='mb-1 uppercase  underline uppercase text-[28px]'>Rechtliches</h3>
+                <h3 className='mb-1 uppercase  underline text-[28px]'>Rechtliches</h3>
                 <Link to="/impressum">Impressum</Link>
                 <Link to="/datenschutz">Datenschutz</Link>
                 <Link to="/kontakt">Kontakt</Link>
