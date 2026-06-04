@@ -23,7 +23,7 @@ export default function Login() {
     <div className="h-screen w-screen flex flex-col">
       <Header />
       <div className="flex-1 flex justify-center items-center">
-        <div className="flex flex-col justify-center items-center gap-8 w-150 h-80 px-20 py-10 border border-(--mainColor) rounded-xl text-[20px] font-light font-[Untitled] text-center">
+        <div className="flex flex-col justify-center items-center gap-8 w-150 h-80 px-20 py-10 border border-(--mainColor) rounded-xl text-[20px] font-light font-[Untitled] text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg">
           <h1 className="text-(--mainColor)">
             Willkommen, {user.email}!
           </h1>

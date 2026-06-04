@@ -25,7 +25,7 @@ export default function SignUp() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="text-(--mainColor) flex flex-col justify-center gap-8 text-[20px] font-light font-[Untitled] px-20 py-40 border border-(--mainColor) rounded-xl"
+            className="text-(--mainColor) flex flex-col justify-center gap-8 text-[20px] font-light font-[Untitled] px-20 py-40 border border-(--mainColor) rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg"
         >
             <div className="flex flex-col gap-2">
                 <label>E-mail</label>

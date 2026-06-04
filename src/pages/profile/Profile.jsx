@@ -22,7 +22,7 @@ export default function Profile() {
         </div>
 
         <div
-            className="mt-10 flex flex-col justify-center text-[20px] font-[Untitled] gap-7 border border-(--mainColor) w-160 h-180 px-40 py-40 rounded-2xl"
+            className="mt-10 flex flex-col justify-center text-[20px] font-[Untitled] gap-7 border border-(--mainColor) w-160 h-180 px-40 py-40 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg"
         >
             <img
                 src="/icons/profile_platzhalter_dark.png"

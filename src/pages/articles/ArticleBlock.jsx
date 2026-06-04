@@ -17,7 +17,7 @@ export default function ArticleBlock({ article }) {
                 <p className="text-sm opacity-90 text-right mt-2">
                     {article.author}
                 </p>
-                <p className="mt-4 text-base opacity-90 flex-grow">
+                <p className="mt-4 text-base opacity-90 grow">
                     {article.description}
                 </p>
 

@@ -15,9 +15,9 @@ import FillProfile from "./pages/profile/FillProfile.jsx"
 import FavoritesPage from "./pages/profile/FavoritesPage.jsx"
 import CollectionsPage from "./pages/profile/CollectionsPage.jsx"
 
-import Impressum from "./pages/footer/Impressum.jsx"
-import Datenschutz from "./pages/footer/Datenschutz.jsx"
-import Contact from "./pages/footer/Contact.jsx"
+import ImpressumPage from "./pages/footer/ImpressumPage.jsx"
+import DatenschutzPage from "./pages/footer/DatenschutzPage.jsx"
+import ContactPage from "./pages/footer/ContactPage.jsx"
 
 export default function Router() {
 
@@ -40,9 +40,9 @@ export default function Router() {
         <Route path="profil/favoriten" element={<FavoritesPage />} />
         <Route path="profil/sammlungen" element={<CollectionsPage />} />
 
-        <Route path="/impressum" element={<Impressum />} />
-        <Route path="/datenschutz" element={<Datenschutz />} />
-        <Route path="/kontakt" element={<Contact />} />
+        <Route path="/impressum" element={<ImpressumPage />} />
+        <Route path="/datenschutz" element={<DatenschutzPage />} />
+        <Route path="/kontakt" element={<ContactPage />} />
        
 
       </Routes>
