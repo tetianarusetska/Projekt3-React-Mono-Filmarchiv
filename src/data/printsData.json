@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "name": "small",
+        "size": "30 × 40 cm",
+        "price": "51",
+        "currency": "eur"
+    },
+    {
+        "id": "2",
+        "name": "medium",
+        "size": "50 × 70 cm",
+        "price": "89",
+        "currency": "eur"
+    },
+    {
+        "id": "3",
+        "name": "large",
+        "size": "70 × 100 cm",
+        "price": "129",
+        "currency": "eur"
+    }
+]

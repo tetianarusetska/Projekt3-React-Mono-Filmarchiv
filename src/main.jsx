@@ -8,6 +8,7 @@ import ModeProvider from "./providers/ModeProvider.jsx"
 import { AuthProvider } from "./providers/AuthContext.jsx"
 import { PhotoModalProvider } from "./providers/PhotoModalProvider.jsx"
 import { PhotosProvider } from "./providers/PhotosProvider.jsx"
+import { PrintsModalProvider } from "./providers/PrintsModalProvider.jsx"
 
 import "./index.css"
 
@@ -15,13 +16,15 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <ModeProvider>
-        <PhotoModalProvider>
-          <AuthProvider>
-            <PhotosProvider>
-            <App />
-            </PhotosProvider>
-          </AuthProvider>
-        </PhotoModalProvider>
+        <PrintsModalProvider>
+          <PhotoModalProvider>
+            <AuthProvider>
+              <PhotosProvider>
+                <App />
+              </PhotosProvider>
+            </AuthProvider>
+          </PhotoModalProvider>
+        </PrintsModalProvider>
       </ModeProvider>
     </BrowserRouter>
   </StrictMode>
