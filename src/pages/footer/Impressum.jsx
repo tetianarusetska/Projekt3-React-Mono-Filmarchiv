@@ -1,6 +1,6 @@
 export default function Impressum() {
     return (
-        <div className="mt-30 flex flex-col items-center gap-2 font-[Untitled] rounded-2xl border border-(--mainColor) py-10 px-10 w-[700px] mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg">
+        <div className="mt-30 flex flex-col items-center gap-2 font-[Untitled] rounded-2xl border border-(--mainColor) py-10 px-10 w-175 mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg">
 
             <h1 className="text-[24px] mb-8 bold">Impressum</h1>
 

@@ -4,18 +4,24 @@ import { Link } from "react-router-dom"
 import SignIn from "../../components/login/SignIn.jsx"
 import Header from "../../components/header/Header.jsx"
 import LogOutButton from "../../components/login/LogOutButton.jsx"
+import FooterIntro from "../../components/footer/FooterIntro.jsx"
+import Footer from "../../components/footer/Footer.jsx"
 
 export default function Login() {
   const { user } = useAuth();
 
   if (!user) {
     return (
-      <div className="h-screen w-screen flex flex-col">
-        <Header />
-        <div className="flex flex-col justify-center items-center gap-15 mt-30">
-          <SignIn />
+      <>
+        <div className="h-screen w-screen flex flex-col">
+          <Header />
+          <div className="flex flex-col justify-center items-center gap-15 mt-30">
+            <SignIn />
+          </div>
         </div>
-      </div>
+        <FooterIntro />
+        <Footer />
+      </>
     );
   }
 
