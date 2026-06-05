@@ -10,7 +10,7 @@ export default function Articles() {
         async function fetchArticles() {
             try {
                 const response = await fetch(
-                    "https://newsapi.org/v2/everything?q=%22film+photography%22+OR+%22analog+photography%22&sortBy=popularity&language=en&apiKey=e8db247f07954719b9949b180defe3d3"
+                    "https://newsapi.org/v2/everything?q=%22film+photography%22+OR+%22analog+photography%22&sortBy=popularity&language=de&apiKey=e8db247f07954719b9949b180defe3d3"
                 );
 
                 if (!response.ok) throw new Error(`HTTP error: ${response.status}`);

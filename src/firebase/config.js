@@ -3,7 +3,6 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyADxi0Zp6pHMJxhyW08hZFBoHq4Zi2MYIM",
   authDomain: "fotoarchiv--mono.firebaseapp.com",
