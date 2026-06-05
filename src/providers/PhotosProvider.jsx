@@ -10,7 +10,7 @@ export function PhotosProvider({ children }) {
         async function fetchPhotos() {
             try {
                 const response = await fetch(
-                    "https://api.unsplash.com/topics/film/photos?per_page=10&orientation=landscape",
+                    "https://api.unsplash.com/topics/film/photos?per_page=30&orientation=landscape",
                     { headers: { Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}` } }
                 );
                 if (!response.ok) throw new Error(`HTTP-Fehler: ${response.status}`);
