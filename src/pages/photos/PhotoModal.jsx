@@ -1,4 +1,6 @@
 import { usePhoto } from '../../providers/PhotoModalProvider.jsx'
+import LikeButton from "../../components/LikeButton.jsx"
+
 
 export default function PhotoModal() {
 
@@ -50,10 +52,15 @@ export default function PhotoModal() {
                         <p>{selectedPhoto?.exif?.focal_length}</p>
                         <p>{selectedPhoto?.exif?.exposure_time}</p>
                     </div>
-                    <div className='mt-1 flex flex-row gap-7'>
-                        <p>{selectedPhoto?.likes} Likes</p>
-                        <p>{selectedPhoto?.views} Aufrufe</p>
-                        <p>{selectedPhoto?.downloads} Downloads</p>
+                    <div className='flex flex-row justify-between'>
+                        <div className='mt-1 flex flex-row gap-7'>
+                            <p>{selectedPhoto?.likes} Likes</p>
+                            <p>{selectedPhoto?.views} Aufrufe</p>
+                            <p>{selectedPhoto?.downloads} Downloads</p>
+                        </div>
+                        <div className='mr-20'>
+                            <LikeButton photoId={selectedPhoto?.id || selectedPhoto?.photoId} photo={selectedPhoto}  />
+                        </div>
                     </div>
 
                     <a href={selectedPhoto?.user?.links?.html}
