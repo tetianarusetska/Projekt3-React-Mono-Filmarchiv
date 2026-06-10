@@ -1,5 +1,7 @@
 import { usePhoto } from '../../providers/PhotoModalProvider.jsx'
 import LikeButton from "../../components/LikeButton.jsx"
+import SaveButton from '../../components/SaveButton.jsx'
+import DownloadButton from '../../components/DownloadButton.jsx'
 
 
 export default function PhotoModal() {
@@ -58,9 +60,12 @@ export default function PhotoModal() {
                             <p>{selectedPhoto?.views} Aufrufe</p>
                             <p>{selectedPhoto?.downloads} Downloads</p>
                         </div>
-                        <div className='mr-20'>
+                        <div className='flex flex-row mr-20 gap-3'>
+                            <DownloadButton photo={selectedPhoto} />
                             <LikeButton photoId={selectedPhoto?.id || selectedPhoto?.photoId} photo={selectedPhoto}  />
+                            <SaveButton photoId={selectedPhoto?.id || selectedPhoto?.photoId} photo={selectedPhoto} />
                         </div>
+                        
                     </div>
 
                     <a href={selectedPhoto?.user?.links?.html}

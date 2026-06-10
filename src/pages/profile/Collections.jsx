@@ -1,42 +1,42 @@
-import { Link } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
+import { useAuth } from "../../providers/AuthContext.jsx"
 
-const mockFavorites = [
-    { id: 1, title: "Samml. 1" },
-    { id: 2, title: "Samml. 2" },
-    { id: 3, title: "Samml. 3" },
-    { id: 4, title: "Samml. 4" },
-    { id: 5, title: "Samml. 5" },
-    { id: 6, title: "Samml. 6" },
-    { id: 7, title: "Samml. 7" },
-    { id: 8, title: "Samml. 8" },
-    { id: 9, title: "Samml. 9" },
-];
-
+const sammlungen = [
+    { id: "stadt-architektur", name: "Stadt & Architektur" },
+    { id: "natur-landschaft", name: "Natur & Landschaft" },
+    { id: "portrait", name: "Portrait" },
+    { id: "licht-schatten", name: "Licht & Schatten" },
+]
 
 export default function Collections() {
+
+    const { user } = useAuth();
+    const navigate = useNavigate();
+
+    if (!user) return <Navigate to="/anmeldung" />
+
     return (
         <div className="flex flex-col">
-
             <div className="mt-20 flex flex-row text-[20px] font-[Untitled] justify-center">
                 <div className="flex gap-8 border-b border-(--mainColor) px-8 pb-2">
                     <Link to="/profil" className="text-(--mainColor) hover:opacity-80">Profil</Link>
                     |
                     <Link to="/profil/favoriten" className="text-(--mainColor) hover:opacity-80">Favoriten</Link>
                 </div>
-                
             </div>
 
             <h1 className="ml-20 mt-10 pb-2 text-(--mainColor) text-[20px] font-[Untitled] border-b border-(--mainColor) w-fit">
                 Sammlungen
             </h1>
 
-            <div className="mt-10 mx-20 grid grid-cols-3 border border-(--mainColor) rounded-2xl">
-                {mockFavorites.map((foto) => (
+            <div className="mt-30 mx-20 grid grid-cols-2 gap-10">
+                {sammlungen.map((col) => (
                     <div
-                        key={foto.id}
-                        className="h-120 border border-(--mainColor) flex items-center justify-center text-(--mainColor) rounded-2xl"
+                        key={col.id}
+                        onClick={() => navigate(`/profil/sammlungen/${col.id}`)}
+                        className="h-60 border border-(--mainColor) flex items-center justify-center text-(--mainColor) font-[Untitled] text-[20px] rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg"
                     >
-                        {foto.title}
+                        {col.name}
                     </div>
                 ))}
             </div>
@@ -44,6 +44,3 @@ export default function Collections() {
         </div>
     );
 }
-
-
-

@@ -60,12 +60,12 @@ export default function LikeButton({ photoId, photo }) {
             {liked ? (
                 <FaHeart
                     size={20}
-                    className="text-white"
+                    className="text-(--mainColor)"
                 />
             ) : (
                 <FaRegHeart
                     size={20}
-                    className="text-white"
+                    className="text-(--mainColor)"
                 />
             )}
         </button>

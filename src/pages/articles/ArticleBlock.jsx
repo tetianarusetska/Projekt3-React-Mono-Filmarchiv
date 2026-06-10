@@ -3,7 +3,7 @@
 export default function ArticleBlock({ article }) {
     return (
         <article
-            className="w-105 h-162.5 rounded-2xl backdrop-blur-lg border border-(--mainColor) transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            className="flex flex-col w-105 h-162.5 rounded-2xl backdrop-blur-lg border border-(--mainColor) transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
         >
             <img
                 src={article.urlToImage}
@@ -23,7 +23,7 @@ export default function ArticleBlock({ article }) {
                     {article.description}
                 </p>
 
-                <div className="mt-6 flex flex-col gap-3">
+                <div className="mt-auto flex flex-col gap-3">
                     <a
                         href={article.url}
                         target="_blank"

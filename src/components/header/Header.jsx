@@ -1,7 +1,7 @@
 import Logo from "./Logo.jsx"
 import Menu from "./Menu.jsx"
 import ModeButton from "./ModeButton.jsx"
-import ProfileIcons from "./ProfileIcons.jsx"
+import ProfileIcons from "./ProfileIcon.jsx"
 
 export default function Header() {
     return (
