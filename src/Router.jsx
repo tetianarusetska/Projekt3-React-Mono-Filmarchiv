@@ -12,9 +12,10 @@ import ArticlesPage from "./pages/articles/ArticlesPage.jsx"
 
 import ProfilePage from "./pages/profile/ProfilePage.jsx"
 import FillProfile from "./pages/profile/FillProfile.jsx"
-import FavoritesPage from "./pages/profile/FavoritesPage.jsx"
-import CollectionsPage from "./pages/profile/CollectionsPage.jsx"
-import CollectionsDetailPage from "./pages/profile/CollectionsDetailPage.jsx"
+import FavoritesPage from "./pages/profile/favorites/FavoritesPage.jsx"
+import CollectionsPage from "./pages/profile/collections/CollectionsPage.jsx"
+import CollectionsDetailPage from "./pages/profile/collections/CollectionsDetailPage.jsx"
+import CartPage from "./pages/profile/cart/CartPage.jsx"
 
 import ImpressumPage from "./pages/footer/ImpressumPage.jsx"
 import DatenschutzPage from "./pages/footer/DatenschutzPage.jsx"
@@ -41,6 +42,7 @@ export default function Router() {
         <Route path="/profil/favoriten" element={<FavoritesPage />} />
         <Route path="/profil/sammlungen" element={<CollectionsPage />} />
         <Route path="/profil/sammlungen/:collectionId" element={<CollectionsDetailPage />} />
+        <Route path="/profil/warenkorb" element={<CartPage />} />
 
         <Route path="/impressum" element={<ImpressumPage />} />
         <Route path="/datenschutz" element={<DatenschutzPage />} />

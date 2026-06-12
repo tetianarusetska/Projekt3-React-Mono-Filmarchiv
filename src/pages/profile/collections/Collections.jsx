@@ -1,5 +1,5 @@
 import { Link, Navigate, useNavigate } from "react-router-dom"
-import { useAuth } from "../../providers/AuthContext.jsx"
+import { useAuth } from "../../../providers/AuthContext.jsx"
 
 const sammlungen = [
     { id: "stadt-architektur", name: "Stadt & Architektur" },

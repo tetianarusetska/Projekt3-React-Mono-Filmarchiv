@@ -5,7 +5,13 @@ export default function Photos() {
 
     const { photos, loading } = usePhotos();
 
-    if (loading) return <p>Laden...</p>
+    if (loading) return (
+        <div className="flex flex-col">
+            <div className="flex justify-center items-center h-screen text-(--mainColor) font-[Untitled] text-[20px]">
+                <p>Laden...</p>
+            </div>
+        </div>
+    );
 
     const groups = [];
     for (let i = 0; i < photos.length; i += 5) {

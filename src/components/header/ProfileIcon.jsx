@@ -77,6 +77,10 @@ export default function ProfileIcons() {
                   className="px-3 py-1 hover:bg-white/10 rounded-md transition">
                   Sammlungen
                 </Link>
+                <Link to="/profil/warenkorb" onClick={() => setShowMenu(false)}
+                  className="px-3 py-1 hover:bg-white/10 rounded-md transition">
+                  Warenkorb
+                </Link>
                 <button
                   onClick={() => { signOut(auth); setShowMenu(false); }}
                   className="text-left px-3 py-1 hover:bg-white/10 rounded-md transition"

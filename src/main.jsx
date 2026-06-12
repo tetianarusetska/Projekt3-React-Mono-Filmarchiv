@@ -9,6 +9,7 @@ import { AuthProvider } from "./providers/AuthContext.jsx"
 import { PhotoModalProvider } from "./providers/PhotoModalProvider.jsx"
 import { PhotosProvider } from "./providers/PhotosProvider.jsx"
 import { PrintsModalProvider } from "./providers/PrintsModalProvider.jsx"
+import { CheckoutProvider } from "./providers/CheckoutProvider.jsx"
 
 import "./index.css"
 
@@ -17,13 +18,15 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <ModeProvider>
         <PrintsModalProvider>
-          <PhotoModalProvider>
-            <AuthProvider>
-              <PhotosProvider>
-                <App />
-              </PhotosProvider>
-            </AuthProvider>
-          </PhotoModalProvider>
+          <CheckoutProvider>
+            <PhotoModalProvider>
+              <AuthProvider>
+                <PhotosProvider>
+                  <App />
+                </PhotosProvider>
+              </AuthProvider>
+            </PhotoModalProvider>
+          </CheckoutProvider>
         </PrintsModalProvider>
       </ModeProvider>
     </BrowserRouter>

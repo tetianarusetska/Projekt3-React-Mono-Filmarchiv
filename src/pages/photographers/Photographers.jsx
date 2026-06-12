@@ -4,7 +4,13 @@ export default function Photographers({ search }) {
 
     const { photos, loading } = usePhotos();
 
-    if (loading) return <p>Laden...</p>
+    if (loading) return (
+        <div className="flex flex-col">
+            <div className="flex justify-center items-center h-screen text-(--mainColor) font-[Untitled] text-[20px]">
+                <p>Laden...</p>
+            </div>
+        </div>
+    );
 
     const photographers = [...new Map(
         photos.map(p => [p.user.username, p.user])

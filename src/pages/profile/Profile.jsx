@@ -19,6 +19,10 @@ export default function Profile() {
             <Link to="/profil/sammlungen" className="pb-2 text-(--mainColor) hover:opacity-80">
                 Sammlungen
             </Link>
+            |
+            <Link to="/profil/warenkorb" className="pb-2 text-(--mainColor) hover:opacity-80">
+                Warenkorb
+            </Link>
         </div>
 
         <div

@@ -1,34 +1,44 @@
 import { useState, useEffect } from "react"
-import { Link, Navigate } from "react-router-dom"
-import { db } from "../../firebase/config.js"
+import { Link, Navigate, useParams } from "react-router-dom"
+import { db } from "../../../firebase/config.js"
 import { collection, onSnapshot } from "firebase/firestore"
-import { useAuth } from "../../providers/AuthContext.jsx"
-import { usePhoto } from "../../providers/PhotoModalProvider.jsx"
+import { useAuth } from "../../../providers/AuthContext.jsx"
+import { usePhoto } from "../../../providers/PhotoModalProvider.jsx"
 
-import LikeButton from "../../components/LikeButton.jsx"
+import SaveButton from "../../../components/SaveButton.jsx"
 
-export default function Favorites() {
+const sammlungen = [
+    { id: "stadt-architektur", name: "Stadt & Architektur" },
+    { id: "natur-landschaft", name: "Natur & Landschaft" },
+    { id: "portrait", name: "Portrait" },
+    { id: "licht-schatten", name: "Licht & Schatten" },
+]
+
+export default function CollectionsDetail() {
 
     const { user } = useAuth();
     const { openPhoto } = usePhoto();
-    const [favorites, setFavorites] = useState([]);
+    const { collectionId } = useParams();
+    const [photos, setPhotos] = useState([]);
 
     useEffect(() => {
         if (!user) return;
 
-        const ref = collection(db, "nutzer", user.uid, "favoriten");
+        const ref = collection(db, "nutzer", user.uid, "sammlungen", collectionId, "fotos");
 
         const unsubscribe = onSnapshot(ref, (snap) => {
             const photos = snap.docs.map(doc => doc.data());
-            setFavorites(photos);
+            setPhotos(photos);
         });
 
         return () => unsubscribe();
-    }, [user]);
+    }, [user, collectionId]);
+
+    const currentCollection = sammlungen.find(col => col.id === collectionId);
 
     if (!user) return <Navigate to="/anmeldung" />
 
-    if (favorites.length === 0) return (
+    if (photos.length === 0) return (
         <div className="flex flex-col">
             <div className="mt-20 flex flex-row text-[20px] font-[Untitled] justify-center">
                 <div className="flex gap-8 border-b border-(--mainColor) px-8 pb-2">
@@ -39,14 +49,14 @@ export default function Favorites() {
             </div>
 
             <h1 className="ml-20 mt-10 pb-2 text-(--mainColor) text-[20px] font-[Untitled] border-b border-(--mainColor) w-fit">
-                Favoriten
+                {currentCollection?.name}
             </h1>
+
             <div className="flex justify-center items-center h-screen text-(--mainColor) font-[Untitled] text-[20px]">
-                <p>Keine Favoriten vorhanden.</p>
+                <p>Keine Fotos vorhanden.</p>
             </div>
         </div>
     )
-
 
     return (
         <div className="flex flex-col">
@@ -60,11 +70,11 @@ export default function Favorites() {
             </div>
 
             <h1 className="ml-20 mt-10 pb-2 text-(--mainColor) text-[20px] font-[Untitled] border-b border-(--mainColor) w-fit">
-                Favoriten
+                {collectionId}
             </h1>
 
             <div className="mt-10 mx-20 grid grid-cols-3 gap-5 rounded-2xl">
-                {favorites.map((foto) => (
+                {photos.map((foto) => (
                     <div
                         key={foto.photoId}
                         onClick={() => openPhoto(foto)}
@@ -79,7 +89,7 @@ export default function Favorites() {
                             className="absolute bottom-3 right-3"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <LikeButton photoId={foto.photoId} photo={foto} />
+                            <SaveButton photoId={foto.photoId} photo={foto} />
                         </div>
                     </div>
                 ))}
@@ -88,6 +98,3 @@ export default function Favorites() {
         </div>
     );
 }
-
-
-

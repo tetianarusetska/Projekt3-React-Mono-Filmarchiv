@@ -8,7 +8,13 @@ export default function Prints() {
     const { openPhoto } = usePhoto();
     const { openPrint } = usePrint();
 
-    if (loading) return <p>Laden...</p>;
+    if (loading) return (
+        <div className="flex flex-col">
+            <div className="flex justify-center items-center h-screen text-(--mainColor) font-[Untitled] text-[20px]">
+                <p>Laden...</p>
+            </div>
+        </div>
+    );
 
     return (
         <div className="mt-30 grid grid-cols-3 gap-12 mx-20">
