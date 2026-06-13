@@ -81,7 +81,7 @@ export default function Cart() {
                 <div className="w-full h-px bg-(--mainColor)/20 mt-5 mb-5" />
                 <button
                     onClick={() => openCheckout()}
-                    className={`font-[Untitled] text-[18px] opacity-80 font-light uppercase p-3 rounded-md w-42 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-white/5 border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/10 hover:scale-[1.03] active:scale-[0.98] ${isCheckoutOpen ? "bg-white/20 border-white/60 scale-[1.03]" : "bg-white/5 border-white/20 opacity-80"}`}
+                    className={`font-[Untitled] text-[18px] opacity-80 font-light uppercase p-3 rounded-md w-42 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-(--mainColor)/5 border border-(--mainColor)/20 shadow-lg transition-all duration-300 hover:bg-(--mainColor)/10 hover:scale-[1.03] active:scale-[0.98] ${isCheckoutOpen ? "bg-(--mainColor)/20 border-(--mainColor)/60 scale-[1.03]" : "bg-(--mainColor)/5 border-(--mainColor)/20 opacity-80"}`}
                 >
                     Bestellen
                 </button>
@@ -105,7 +105,7 @@ export default function Cart() {
                         <p className="ml-4 bold underline">€{photo?.price?.toFixed(2)}</p>
                         <button
                             onClick={() => removeFromCart(photo.itemId)}
-                            className="mt-15 mb-10 font-[Untitled] text-[18px] opacity-80 font-light uppercase mx-auto p-3 rounded-md w-38 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-white/5 border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/10 hover:scale-[1.03] active:scale-[0.98]"
+                            className="mt-15 mb-10 font-[Untitled] text-[18px] opacity-80 font-light uppercase mx-auto p-3 rounded-md w-38 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-(--mainColor)/5 border border-(--mainColor)/20 shadow-lg transition-all duration-300 hover:bg-(--mainColor)/10 hover:scale-[1.03] active:scale-[0.98]"
                         >
                             Löschen
                         </button>

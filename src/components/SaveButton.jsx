@@ -91,7 +91,7 @@ export default function SaveButton({ photoId, photo }) {
                             <button
                                 key={col.id}
                                 onClick={() => saveToCollection(col.id)}
-                                className="text-left px-3 py-1 hover:bg-white/10 rounded-md transition"
+                                className="text-left px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition"
                             >
                                 {col.name}
                             </button>

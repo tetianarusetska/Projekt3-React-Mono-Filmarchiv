@@ -36,7 +36,7 @@ export default function Articles() {
     );
 
     return (
-        <div className="mt-20 grid grid-cols-3 gap-12 mx-20">
+        <div className="mt-30 grid grid-cols-3 gap-12 mx-20">
             {articles.map((article, index) => (
                 <ArticleBlock key={index} article={article} />
             ))}

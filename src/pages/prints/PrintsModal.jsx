@@ -16,13 +16,13 @@ export default function PrintsModal() {
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-(--bgColor)/70 backdrop-blur-sm"
             onClick={onBackgroundClick}
         >
             <div className="relative bg-(--bgColor) shadow-2xl max-w-5xl h-[70vh] w-full mx-4 overflow-hidden flex flex-row">
                 <button
                     onClick={closePrint}
-                    className="top-1 right-1 absolute z-10 bg-black/50 hover:bg-black/70 text-white w-10 h-10 flex items-center justify-center text-lg transition"
+                    className="top-1 right-1 absolute z-10 bg-(--bgColor)/50 hover:bg-(--bgColor)/70 text-(--mainColor) w-10 h-10 flex items-center justify-center text-lg transition"
                 >
                     X
                 </button>
@@ -65,8 +65,8 @@ export default function PrintsModal() {
                                             backdrop-blur-lg border shadow-lg
                                             transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl cursor-pointer
                                             ${isSelected
-                                                ? "bg-white/20 border-white/60 scale-[1.03]"
-                                                : "bg-white/5 border-white/20 opacity-80"
+                                                ? "bg-(--mainColor)/20 border-(--mainColor)/60 scale-[1.03]"
+                                                : "bg-(--mainColor)/5 border-(--mainColor)/20 opacity-80"
                                             }
                                         `}
                                     >

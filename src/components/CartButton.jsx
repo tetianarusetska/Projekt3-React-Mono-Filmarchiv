@@ -50,7 +50,7 @@ export default function CartButton({ photo, size, price }) {
     return (
         <button
             onClick={toggleCart}
-            className={`mt-15 font-[Untitled] text-[18px] font-light uppercase mx-auto p-3 rounded-md w-42.5 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md border shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98] ${inCart ? "bg-white/20 border-white/60 scale-[1.03]" : "bg-white/5 border-white/20 opacity-80"}`}
+            className={`mt-15 font-[Untitled] text-[18px] font-light uppercase mx-auto p-3 rounded-md w-42.5 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md border shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98] ${inCart ? "bg-(--mainColor)/20 border-(--mainColor)/60 scale-[1.03]" : "bg-(--mainColor)/5 border-(--mainColor)/20 opacity-80"}`}
         >
             In Warenkorb
         </button>

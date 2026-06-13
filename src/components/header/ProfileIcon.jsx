@@ -55,35 +55,35 @@ export default function ProfileIcons() {
             {!user ? (
               <>
                 <Link to="/anmeldung" onClick={() => setShowMenu(false)}
-                  className="px-3 py-1 hover:bg-white/10 rounded-md transition">
+                  className="px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition">
                   Anmelden
                 </Link>
                 <Link to="/registrierung" onClick={() => setShowMenu(false)}
-                  className="px-3 py-1 hover:bg-white/10 rounded-md transition">
+                  className="px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition">
                   Registrieren
                 </Link>
               </>
             ) : (
               <>
                 <Link to="/profil" onClick={() => setShowMenu(false)}
-                  className="px-3 py-1 hover:bg-white/10 rounded-md transition">
+                  className="px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition">
                   Zum Profil
                 </Link>
                 <Link to="/profil/favoriten" onClick={() => setShowMenu(false)}
-                  className="px-3 py-1 hover:bg-white/10 rounded-md transition">
+                  className="px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition">
                   Favoriten
                 </Link>
                 <Link to="/profil/sammlungen" onClick={() => setShowMenu(false)}
-                  className="px-3 py-1 hover:bg-white/10 rounded-md transition">
+                  className="px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition">
                   Sammlungen
                 </Link>
                 <Link to="/profil/warenkorb" onClick={() => setShowMenu(false)}
-                  className="px-3 py-1 hover:bg-white/10 rounded-md transition">
+                  className="px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition">
                   Warenkorb
                 </Link>
                 <button
                   onClick={() => { signOut(auth); setShowMenu(false); }}
-                  className="text-left px-3 py-1 hover:bg-white/10 rounded-md transition"
+                  className="text-left px-3 py-1 hover:bg-(--mainColor)/10 rounded-md transition"
                 >
                   Logout
                 </button>

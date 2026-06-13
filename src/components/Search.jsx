@@ -24,7 +24,7 @@ export default function Search({ onSearch }) {
         <button>
             <img
                 src="/icons/dark_search.png"
-                className="absolute top-42 right-135 w-7 h-7"
+                className="absolute -translate-y-3.5 right-133 w-7 h-7"
             />
         </button>
     </div>

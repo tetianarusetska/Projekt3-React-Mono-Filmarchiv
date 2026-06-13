@@ -35,9 +35,9 @@ export default function Prints() {
                     <p className="ml-4 bold underline">€51,00 - €129,00</p>
                     <button
                      onClick={() => openPrint(photo)}
-                        className="mt-15 mb-10 font-[Untitled] text-[20px] opacity-80 font-light uppercase mx-auto p-3 rounded-md w-42.5 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-white/5 border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/10 hover:scale-[1.03] active:scale-[0.98]"
+                        className="mt-15 mb-10 font-[Untitled] text-[20px] opacity-80 font-light uppercase mx-auto p-3 rounded-md w-42.5 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-(--mainColor)/5 border border-(--mainColor)/20 shadow-lg transition-all duration-300 hover:bg-(--mainColor)/10 hover:scale-[1.03] active:scale-[0.98]"
                     >
-                        Kaufen
+                       Bestellen
                     </button>
                 </div>
             ))}

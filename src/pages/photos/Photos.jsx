@@ -19,7 +19,7 @@ export default function Photos() {
     }
 
     return (
-        <div>
+        <div className="mt-60">
             {groups.map((group, index) => (
                 <PhotoBlock key={index} photos={group} />
             ))}

@@ -24,7 +24,7 @@ export default function Photographers({ search }) {
     return (
         <div className="mt-20 grid grid-cols-3 gap-20">
             {filteredPhotographers.map(user => (
-                <div key={user.username} className="p-8 text-[20px] mx-10 flex flex-col justify-center gap-3 items-center font-[Fejoya] rounded-3xl border border-(--mainColor)">
+                <div key={user.username} className="p-8 text-[20px] mx-10 flex flex-col justify-center gap-3 items-center font-[Fejoya] rounded-3xl border border-(--mainColor) backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
                     <img
                         src={user.profile_image.large}
                         alt={user.name}

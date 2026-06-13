@@ -17,7 +17,7 @@ export default function PhotoModal() {
     return (
 
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-(--bgColor)/70 backdrop-blur-sm"
             onClick={onBackgroundClick}
         >
             <div
@@ -25,7 +25,7 @@ export default function PhotoModal() {
             >
                 <button
                     onClick={closePhoto}
-                    className="absolute top-5 right-5 z-10 bg-black/50 hover:bg-black/70 text-white w-10 h-10 flex items-center justify-center text-lg transition"
+                    className="absolute top-5 right-5 z-10 bg-(--bgColor)/50 hover:bg-(--bgColor)/70 text-(--mainColor) w-10 h-10 flex items-center justify-center text-lg transition"
                 >
                     X
                 </button>
