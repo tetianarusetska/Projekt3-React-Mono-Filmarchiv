@@ -11,7 +11,7 @@ import PrintsPage from "./pages/prints/PrintsPage.jsx"
 import ArticlesPage from "./pages/articles/ArticlesPage.jsx"
 
 import ProfilePage from "./pages/profile/ProfilePage.jsx"
-import FillProfilePage from "./pages/profile/FillProfilePage.jsx"
+import FillProfilePage from "./pages/profile/editProfile/FillProfilePage.jsx"
 import FavoritesPage from "./pages/profile/favorites/FavoritesPage.jsx"
 import CollectionsPage from "./pages/profile/collections/CollectionsPage.jsx"
 import CollectionsDetailPage from "./pages/profile/collections/CollectionsDetailPage.jsx"
