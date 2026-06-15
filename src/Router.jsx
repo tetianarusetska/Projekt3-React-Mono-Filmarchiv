@@ -11,7 +11,7 @@ import PrintsPage from "./pages/prints/PrintsPage.jsx"
 import ArticlesPage from "./pages/articles/ArticlesPage.jsx"
 
 import ProfilePage from "./pages/profile/ProfilePage.jsx"
-import FillProfile from "./pages/profile/FillProfile.jsx"
+import FillProfilePage from "./pages/profile/FillProfilePage.jsx"
 import FavoritesPage from "./pages/profile/favorites/FavoritesPage.jsx"
 import CollectionsPage from "./pages/profile/collections/CollectionsPage.jsx"
 import CollectionsDetailPage from "./pages/profile/collections/CollectionsDetailPage.jsx"
@@ -38,7 +38,7 @@ export default function Router() {
         <Route path="/artikel" element={<ArticlesPage />} />
 
         <Route path="/profil" element={<ProfilePage />} />
-        <Route path="/profil/bearbeiten" element={<FillProfile />} />
+        <Route path="/profil/bearbeiten" element={<FillProfilePage />} />
         <Route path="/profil/favoriten" element={<FavoritesPage />} />
         <Route path="/profil/sammlungen" element={<CollectionsPage />} />
         <Route path="/profil/sammlungen/:collectionId" element={<CollectionsDetailPage />} />

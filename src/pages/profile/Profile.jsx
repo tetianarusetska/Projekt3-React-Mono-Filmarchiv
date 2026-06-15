@@ -1,11 +1,12 @@
 import LogOutButton from "../../components/login/LogOutButton.jsx";
 import { useAuth } from "../../providers/AuthContext.jsx"
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 
 export default function Profile() {
 
     const { user } = useAuth();
 
+    if (!user) return <Navigate to="/anmeldung" />
 
     return <div
         className="h-screen w-screen flex flex-col justify-center items-center"

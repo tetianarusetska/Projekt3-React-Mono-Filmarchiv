@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { onAuthStateChanged } from "firebase/auth"
-import { auth } from "../firebase/config"
+import { doc, onSnapshot } from "firebase/firestore"
+import { auth, db } from "../firebase/config"
 
 const AuthContext = createContext();
 
@@ -10,11 +11,39 @@ export function AuthProvider({ children }) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, maybeFirebaseUser => {
-            setUser(maybeFirebaseUser);
-            setIsLoading(false);
+        let unsubscribeProfile = () => {};
+
+        const unsubscribeAuth = onAuthStateChanged(auth, (maybeFirebaseUser) => {
+            
+            unsubscribeProfile();
+
+            if (!maybeFirebaseUser) {
+                setUser(null);
+                setIsLoading(false);
+                return;
+            }
+
+            const profileRef = doc(db, "users", maybeFirebaseUser.uid);
+            
+            unsubscribeProfile = onSnapshot(profileRef, (snapshot) => {
+
+                const profileData = snapshot.exists() ? snapshot.data() : {};
+
+                setUser({
+                    uid: maybeFirebaseUser.uid,
+                    email: maybeFirebaseUser.email,
+                    displayName: maybeFirebaseUser.displayName,
+                    ...profileData, 
+                });
+
+                setIsLoading(false);
+            });
         });
-        return unsubscribe;
+
+        return () => {
+            unsubscribeAuth();
+            unsubscribeProfile();
+        };
     }, []);
 
     return (
