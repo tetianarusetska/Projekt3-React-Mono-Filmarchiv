@@ -70,7 +70,7 @@ export default function CollectionsDetail() {
             </div>
 
             <h1 className="ml-20 mt-10 pb-2 text-(--mainColor) text-[20px] font-[Untitled] border-b border-(--mainColor) w-fit">
-                {collectionId}
+                {currentCollection?.name}
             </h1>
 
             <div className="mt-10 mx-20 grid grid-cols-3 gap-5 rounded-2xl">
