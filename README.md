@@ -11,7 +11,7 @@ Firebase Authentication (E-Mail/Passwort), Firestore (Echtzeit-Datenbank), Unspl
 ### Hosting
 Vercel
 
-###State Management: 5 React Context Provider
+### State Management: 5 React Context Provider
 React Context API (mehrere Provider für Auth, Fotos, UI und Checkout)
 
 ## Kernfeatures
