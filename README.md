@@ -44,6 +44,7 @@ Dark/Light Mode – Theme-Umschaltung via Context Provider
 ## Feature Preview
 
 [![MONO Demo](./public/readme/cover.png)](https://youtu.be/672el6Wr-d0)
+**[Feature Preview ansehen](https://youtu.be/672el6Wr-d0)**
 
 ## Live-Demo
 
