@@ -43,8 +43,8 @@ Dark/Light Mode – Theme-Umschaltung via Context Provider
 
 ## Feature Preview
 
-<a href="https://youtu.be/VIDEO_ID">
-  <img src="https://img.youtu.be.com/vi/672el6Wr-d0/hqdefault.jpg" alt="MONO Demo" width="800">
+<a href="https://youtu.be/672el6Wr-d0">
+  <img src="https://img.youtube.com/vi/672el6Wr-d0/hqdefault.jpg" alt="MONO Demo" width="900">
 </a>
 
 
