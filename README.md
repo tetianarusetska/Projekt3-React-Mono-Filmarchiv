@@ -43,9 +43,11 @@ Dark/Light Mode – Theme-Umschaltung via Context Provider
 
 ## Feature Preview
 
-<a href="https://youtu.be/672el6Wr-d0">
-  <img src="./public/readme/cover.png" alt="MONO Demo">
-</a>
+[![MONO Demo](./public/readme/cover.png)](https://youtu.be/672el6Wr-d0)
+
+## Live-Demo
+
+[Vercel-Live-Demo](https://projekt3-react-mono-filmarchiv.vercel.app)
 
 
 
