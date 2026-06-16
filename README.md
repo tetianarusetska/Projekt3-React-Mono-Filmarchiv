@@ -37,7 +37,7 @@ Dark/Light Mode – Theme-Umschaltung via Context Provider
 
 ![Profile](./public/readme/profile.png)
 ![Favoriten](./public/readme/favoriten.png)
-![Sammlungen](./public/readme/colelction.png)
+![Sammlungen](./public/readme/colelctions.png)
 ![Warenkorb](./public/readme/checkout.png)
 
 
