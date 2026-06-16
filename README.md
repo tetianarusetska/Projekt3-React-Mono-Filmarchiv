@@ -43,7 +43,7 @@ Dark/Light Mode – Theme-Umschaltung via Context Provider
 
 ## Feature Preview
 
-[Open Demo Video](./public/demo.mp4)
+[![Projekt ansehen](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/672el6Wr-d0)
 
 
 
