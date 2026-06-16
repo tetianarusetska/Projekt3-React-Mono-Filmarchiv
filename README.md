@@ -35,6 +35,9 @@ Dark/Light Mode – Theme-Umschaltung via Context Provider
 
 ## Screens
 
+![Profile](./readme/profile.pdf)
+
+
 ## Feature Preview
 
 
