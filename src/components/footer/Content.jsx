@@ -22,7 +22,7 @@ const Section1 = () => {
 const Section2 = () => {
 
     return (
-        <div className='flex justify-between items-end text-(--bgColor) font-[SöhneSchmalBuch]'>
+        <div className='flex justify-between items-end text-(--bgColor) font-[SohneSchmalBuch]'>
             <h1 className='text-[18vw] leading-[0.8] mt-10'>MONO. DEIN FOTOARCHIV</h1>
             <p className='font-bold font-[Inter]'>©2026</p>
         </div>
