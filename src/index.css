@@ -146,13 +146,13 @@
 }
 
 @font-face {
-    font-family: "SöhneSchmalBuch";
-    src: url("/fonts/test1otf/Test_Söhne_Collection/Test_Söhne_Schmal/TestSöhneSchmal-Buch.otf");
+    font-family: "SohneSchmalBuch";
+    src: url("/fonts/test1otf/Test_Sohne_Collection/Test_Sohne_Schmal/TestSohneSchmalBuch.otf");
 }
 
 @font-face {
-    font-family: "SöhneSchmalLeicht";
-    src: url("/fonts/test1otf/Test_Söhne_Collection/Test_Söhne_Schmal/TestSöhneSchmal-Extraleicht.otf");
+    font-family: "SohneSchmalLeicht";
+    src: url("/fonts/test1otf/Test_Soohne_Collection/Test_Soohne_Schmal/TestSohneSchmalExtraleicht.otf");
 }
 
 :root {
