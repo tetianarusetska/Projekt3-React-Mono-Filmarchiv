@@ -9,12 +9,28 @@ export function PhotosProvider({ children }) {
     useEffect(() => {
         async function fetchPhotos() {
             try {
+                // const response = await fetch(
+                //     "https://api.unsplash.com/topics/film/photos?per_page=30&orientation=landscape",
+                //     { headers: { Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}` } }
+                // );
+                
+                // if (!response.ok) throw new Error(`HTTP-Fehler: ${response.status}`);
+                // const data = await response.json();
+
                 const response = await fetch(
-                    "https://api.unsplash.com/topics/film/photos?per_page=30&orientation=landscape",
-                    { headers: { Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}` } }
-                );
-                if (!response.ok) throw new Error(`HTTP-Fehler: ${response.status}`);
-                const data = await response.json();
+  "https://api.unsplash.com/topics/film/photos?per_page=30&orientation=landscape",
+  {
+    headers: {
+      Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`
+    }
+  }
+);
+
+if (!response.ok) {
+  const errorText = await response.text();
+  console.log("Unsplash response:", errorText);
+  throw new Error(`HTTP-Fehler: ${response.status}`);
+}
 
                 const detailedPhotos = await Promise.all(
                     data.map(photo =>
