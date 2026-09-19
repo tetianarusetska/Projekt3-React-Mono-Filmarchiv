@@ -12,6 +12,7 @@ export default function PhotosPage() {
             <TextSection
                 label="Fotos"
                 quote="Entdecke außergewöhnliche Fotografien und erfahre mehr über die Menschen, Orte und Geschichten hinter jedem Bild."
+                className="min-h-[40vh] py-10 mt-20 lg:mt-0 lg:min-h-[80vh] lg:py-0"
             />
             <Photos />
             <PhotoModal />

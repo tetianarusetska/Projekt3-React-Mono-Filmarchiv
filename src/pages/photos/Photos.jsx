@@ -19,9 +19,16 @@ export default function Photos() {
     }
 
     return (
-        <div className="mt-60">
+        <div className="mt-20 lg:mt-60">
             {groups.map((group, index) => (
-                <PhotoBlock key={index} photos={group} />
+                <PhotoBlock
+                    key={index}
+                    photos={group}
+                    className="h-[150vh] lg:h-[200vh]"
+                    imageClassName="h-[70vh] lg:h-screen"
+                    listClassName="bottom-6 left-4 lg:bottom-28 lg:left-8"
+                    numberClassName="text-[28px] lg:text-[50px]"
+                />
             ))}
         </div>
     );
