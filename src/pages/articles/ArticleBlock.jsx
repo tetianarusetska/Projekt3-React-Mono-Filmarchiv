@@ -1,19 +1,17 @@
-
-
-export default function ArticleBlock({ article }) {
+export default function ArticleBlock({ article, className = "" }) {
     return (
         <article
-            className="flex flex-col w-105 h-162.5 rounded-2xl backdrop-blur-lg border border-(--mainColor) transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            className={`flex flex-col rounded-2xl backdrop-blur-lg border border-(--mainColor) transition-all duration-300 lg:hover:-translate-y-2 hover:shadow-2xl ${className}`}
         >
             <img
                 src={article.urlToImage}
                 alt={article.title}
-                className="h-64 w-full object-cover rounded-t-2xl"
+                className="h-48 md:h-56 lg:h-64 w-full object-cover rounded-t-2xl"
             />
 
-            <div className="p-6 flex flex-col flex-1">
+            <div className="p-4 lg:p-6 flex flex-col flex-1">
 
-                <h2 className="text-2xl font-bold leading-tight">
+                <h2 className="text-xl lg:text-2xl font-bold leading-tight break-words">
                     {article.title}
                 </h2>
                 <p className="text-sm opacity-90 text-right mt-2">
@@ -23,7 +21,7 @@ export default function ArticleBlock({ article }) {
                     {article.description}
                 </p>
 
-                <div className="mt-auto flex flex-col gap-3">
+                <div className="mt-6 lg:mt-auto flex flex-col gap-3">
                     <a
                         href={article.url}
                         target="_blank"

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import ArticleBlock from "./ArticleBlock"
 
-export default function Articles() {
+export default function Articles({ className = "", gridClassName = "", cardClassName = "" }) {
 
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -37,9 +37,9 @@ export default function Articles() {
     );
 
     return (
-        <div className="mt-30 grid grid-cols-3 gap-12 mx-20">
+        <div className={`grid ${className} ${gridClassName}`}>
             {articles.map((article, index) => (
-                <ArticleBlock key={index} article={article} />
+                <ArticleBlock key={index} article={article} className={cardClassName} />
             ))}
         </div>
     );
