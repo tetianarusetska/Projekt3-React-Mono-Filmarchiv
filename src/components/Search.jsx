@@ -13,7 +13,7 @@ export default function Search({ onSearch }) {
     }
 
     return <div
-        className="mt-20 flex justify-center items-center"
+        className="-mt-16 lg:mt-20 flex justify-center items-center"
     >
         <input
             value={value}
