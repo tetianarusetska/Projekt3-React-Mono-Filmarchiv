@@ -15,11 +15,11 @@ export default function ProfileIcons() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="absolute top-13.5 right-22">
+    <div className="absolute top-5.5 right-13 md:top-13.5 md:right-22">
       <img
         src={icons[theme.name]}
         alt="Profile Icon"
-        className="w-10 h-10 cursor-pointer"
+        className="w-9 h-9 md:w-10 md:h-10 cursor-pointer"
         onClick={() => setShowMenu(!showMenu)}
       />
 

@@ -5,7 +5,7 @@ import ProfileIcons from "./ProfileIcon.jsx"
 
 export default function Header() {
     return (
-        <div className="flex flex-row gap-5">
+        <div className="relative flex flex-row flex-wrap gap-y-2 md:flex-nowrap md:gap-5">
             <Logo />
             <Menu />
             <ModeButton />

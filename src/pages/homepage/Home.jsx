@@ -35,18 +35,18 @@ export default function Home() {
                 <TextSection
                     label="Über das Archiv"
                     quote="Fotografie. Erinnerung. Zeit. Ein kuratiertes Archiv aus Bildern, Essays und Fine-Art-Prints."
-                    className="min-h-[40vh] py-10 -translate-y-70 lg:translate-y-0 lg:min-h-[80vh] lg:py-0"
+                    className="min-h-[40vh] py-10 -translate-y-50 md:-translate-y-70 lg:translate-y-0 lg:min-h-[80vh] lg:py-0"
                 />
                 <FeaturedPhoto1 className="h-[280vh] -mt-[50vh] lg:h-[300vh] lg:mt-0" />
                 <TextSection
                     label="Archiv"
                     quote="Mehr als nur Fotografien. Eine Sammlung von Menschen, Orten und Augenblicken, die über Jahre hinweg festgehalten wurden."
-                    className="min-h-[40vh] py-10 -translate-y-180 lg:translate-y-0 lg:min-h-[80vh] lg:py-0"
+                    className="min-h-[40vh] py-10 -translate-y-120 md:-translate-y-180 lg:translate-y-0 lg:min-h-[80vh] lg:py-0"
                 />
                 <TextSection
                     label="Sammlungen"
                     quote="Speichere deine Lieblingsbilder und stelle persönliche Kollektionen zusammen."
-                    className="min-h-[40vh] py-10 -translate-y-160 mb-80 lg:translate-y-0 lg:min-h-[80vh] lg:py-0 lg:mb-0"
+                    className="min-h-[40vh] py-10 -translate-y-110 md:-translate-y-160 mb-20 md:mb-80 lg:translate-y-0 lg:min-h-[80vh] lg:py-0 lg:mb-0"
                 />
                 <FeaturedPhoto2 className="hidden lg:block lg:h-[300vh]" />
                 <TextSection

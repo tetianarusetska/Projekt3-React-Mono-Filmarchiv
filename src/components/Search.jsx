@@ -12,9 +12,7 @@ export default function Search({ onSearch }) {
         onSearch(newValue);
     }
 
-    return <div
-        className="-mt-16 lg:mt-20 flex justify-center items-center"
-    >
+    return <div className="hidden md:-mt-16 lg:mt-20 md:flex md:justify-center md:items-center">
         <input
             value={value}
             onChange={handleChange}

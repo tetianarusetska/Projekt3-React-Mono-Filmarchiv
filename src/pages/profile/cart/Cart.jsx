@@ -37,8 +37,8 @@ export default function Cart() {
 
     if (items.length === 0) return (
         <div className="flex flex-col">
-            <div className="mt-20 flex flex-row text-[20px] font-[Untitled] justify-center">
-                <div className="flex gap-8 border-b border-(--mainColor) px-8 pb-2">
+            <div className="mt-8 lg:mt-20 flex flex-row text-[16px] lg:text-[20px] font-[Untitled] justify-center">
+    <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 lg:gap-8 border-b border-(--mainColor) px-4 lg:px-8 pb-2">
                     <Link to="/profil" className="text-(--mainColor) hover:opacity-80">Profil</Link>
                     |
                     <Link to="/profil/sammlungen" className="text-(--mainColor) hover:opacity-80">Sammlungen</Link>
@@ -47,10 +47,10 @@ export default function Cart() {
                 </div>
             </div>
 
-            <h1 className="ml-20 mt-10 pb-2 text-(--mainColor) text-[20px] font-[Untitled] border-b border-(--mainColor) w-fit">
+            <h1 className="ml-4 lg:ml-20 mt-6 lg:mt-10 pb-2 text-(--mainColor) text-[18px] lg:text-[20px] font-[Untitled] border-b border-(--mainColor) w-fit">
                 Warenkorb
             </h1>
-            <div className="flex justify-center items-center h-screen text-(--mainColor) font-[Untitled] text-[20px]">
+            <div className="flex justify-center items-center min-h-[50vh] lg:h-screen px-4 text-center text-(--mainColor) font-[Untitled] text-[18px] lg:text-[20px]">
                 <p>Warenkorb ist leer.</p>
             </div>
         </div>
@@ -74,7 +74,7 @@ export default function Cart() {
             <h1 className="ml-20 mt-10 pb-2 text-(--mainColor) text-[20px] font-[Untitled] border-b border-(--mainColor) w-fit">
                 Warenkorb
             </h1>
-            <div className="mx-20 mt-8 flex flex-col items-start justify-start">
+            <div className="mx-4 lg:mx-20 mt-6 lg:mt-8 flex flex-col items-start justify-start">
                 <p className="font-[Untitled] text-[20px] text-(--mainColor) opacity-80">
                     Gesamt: €{total}
                 </p>
@@ -87,11 +87,11 @@ export default function Cart() {
                 </button>
             </div>
 
-            <div className="mt-15 grid grid-cols-3 gap-12 mx-20">
+           <div className="mt-8 lg:mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 mx-4 lg:mx-20">
                 {items.map(photo => (
                     <div
                         key={photo.itemId}
-                        className="font-[Fejoya] rounded-2xl text-[18px] text-(--mainColor) w-90 h-150 backdrop-blur-lg border border-(--mainColor) cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                        className="font-[Fejoya] rounded-2xl text-[16px] lg:text-[18px] text-(--mainColor) w-full max-w-sm mx-auto h-auto pb-2 lg:w-90 lg:max-w-none lg:mx-0 lg:h-150 lg:pb-0 backdrop-blur-lg border border-(--mainColor) cursor-pointer transition-all duration-300 lg:hover:-translate-y-2 hover:shadow-2xl"
                     >
                         <h1 className="px-5 py-5 text-right text-[20px]">{photo?.user?.name}</h1>
                         <img
@@ -105,7 +105,7 @@ export default function Cart() {
                         <p className="ml-4 bold underline">€{photo?.price?.toFixed(2)}</p>
                         <button
                             onClick={() => removeFromCart(photo.itemId)}
-                            className="mt-15 mb-10 font-[Untitled] text-[18px] opacity-80 font-light uppercase mx-auto p-3 rounded-md w-38 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-(--mainColor)/5 border border-(--mainColor)/20 shadow-lg transition-all duration-300 hover:bg-(--mainColor)/10 hover:scale-[1.03] active:scale-[0.98]"
+                            className="mt-8 mb-6 lg:mt-15 lg:mb-10 font-[Untitled] text-[18px] opacity-80 font-light uppercase mx-auto p-3 rounded-md w-38 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-(--mainColor)/5 border border-(--mainColor)/20 shadow-lg transition-all duration-300 hover:bg-(--mainColor)/10 hover:scale-[1.03] active:scale-[0.98]"
                         >
                             Löschen
                         </button>

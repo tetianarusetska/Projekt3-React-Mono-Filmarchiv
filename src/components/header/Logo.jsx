@@ -13,7 +13,7 @@ export default function Logo() {
 
                 src={logos[theme.name]}
                 alt="logo"
-                className="ml-15 mt-5 w-16 h-16"
+                className="ml-4 mt-4 w-12 h-12 md:ml-15 md:mt-5 md:w-16 md:h-16"
             />
         </Link>
     );

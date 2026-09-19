@@ -65,18 +65,18 @@ export default function FillProfile() {
     };
 
     return (
-        <div className="h-screen w-screen flex flex-col justify-center items-center">
+        <div className="min-h-screen w-full px-4 py-10 flex flex-col justify-center items-center lg:h-screen lg:w-screen lg:px-0 lg:py-0">
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="mt-30 flex flex-col justify-center items-center text-[20px] font-[Untitled] gap-10 border border-(--mainColor) w-160 h-180 px-40 py-40 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg"
+                className="mt-10 lg:mt-30 flex flex-col justify-center items-center text-[16px] lg:text-[20px] font-[Untitled] gap-6 lg:gap-10 border border-(--mainColor) w-full max-w-md lg:max-w-none lg:w-160 h-auto lg:h-180 px-6 py-8 lg:px-40 lg:py-40 rounded-2xl transition-all duration-300 lg:hover:-translate-y-2 hover:shadow-2xl backdrop-blur-lg"
             >
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 w-full lg:w-auto">
                     <label>Dein Name</label>
                     <input
                         type="text"
                         {...register("displayName")}
-                        className="border border-(--mainColor) w-100 h-7.5 rounded-sm text-[18px]"
+                        className="border border-(--mainColor) w-full lg:w-100 h-10 lg:h-7.5 px-2 rounded-sm text-[18px]"
                     />
                     {errors.displayName && <p className="text-(--mainColor) text-[14px]">{errors.displayName.message}</p>}
                 </div>
@@ -87,7 +87,7 @@ export default function FillProfile() {
                         type="text"
                         {...register("username")}
                         placeholder="ohne @"
-                        className="border border-(--mainColor) w-100 h-7.5 rounded-sm text-[18px]"
+                        className="border border-(--mainColor) w-full lg:w-100 h-10 lg:h-7.5 px-2 rounded-sm text-[18px]"
                     />
                     {errors.username && <p className="text-(--mainColor) text-[14px]">{errors.username.message}</p>}
                 </div>
@@ -97,7 +97,7 @@ export default function FillProfile() {
                     <input
                         type="text"
                         {...register("location")}
-                        className="border border-(--mainColor) w-100 h-7.5 rounded-sm text-[18px]"
+                        className="border border-(--mainColor) w-full lg:w-100 h-10 lg:h-7.5 px-2 rounded-sm text-[18px]"
                     />
                     {errors.location && <p className="text-(--mainColor) text-[14px]">{errors.location.message}</p>}
                 </div>
@@ -107,9 +107,9 @@ export default function FillProfile() {
                     <textarea
                         {...register("bio")}
                         rows={3}
-                        className="border border-(--mainColor) w-100 h-7.5 rounded-sm text-[18px]"
+                        className="border border-(--mainColor) w-full lg:w-100 h-24 lg:h-7.5 px-2 rounded-sm text-[18px]"
                     />
-                    {errors.bio && <p className="text-(--mainColor)text-[14px]">{errors.bio.message}</p>}
+                    {errors.bio && <p className="text-(--mainColor) text-[14px]">{errors.bio.message}</p>}
                 </div>
 
                 <div className="flex flex-col gap-2">
@@ -118,7 +118,7 @@ export default function FillProfile() {
                         type="text"
                         {...register("socials.instagram")}
                         placeholder="@benutzername"
-                        className="border border-(--mainColor) w-100 h-7.5 rounded-sm text-[18px]"
+                        className="border border-(--mainColor) w-full lg:w-100 h-24 lg:h-7.5 px-2 rounded-sm text-[18px]"
                     />
                     {errors.socials?.instagram && <p className="text-(--mainColor) text-[14px]">{errors.socials.instagram.message}</p>}
                 </div>
@@ -127,7 +127,7 @@ export default function FillProfile() {
                     <p className="text-(--mainColor) text-[16px]">{error}</p>
                 )}
 
-                <div className="flex flex-row gap-15 justify-center mt-2">
+                <div className="flex flex-row flex-wrap gap-3 lg:gap-15 justify-center mt-2">
                     <button
                         type="submit"
                         disabled={saving}

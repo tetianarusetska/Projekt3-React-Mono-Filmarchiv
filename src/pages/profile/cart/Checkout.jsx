@@ -56,7 +56,7 @@ export default function Checkout() {
             className="fixed inset-0 z-50 flex items-center justify-center bg-(--bgColor)/70 backdrop-blur-sm"
             onClick={onBackgroundClick}
         >
-            <div className="relative bg-(--bgColor) shadow-2xl max-w-5xl w-full mx-4 max-h-[80vh] overflow-y-auto flex flex-col p-8">
+            <div data-lenis-prevent className="relative bg-(--bgColor) shadow-2xl max-w-5xl w-full mx-2 lg:mx-4 max-h-[90dvh] lg:max-h-[80vh] overflow-y-auto flex flex-col p-4 lg:p-8">
 
                 <div className="flex items-center justify-between mb-6">
                     <h2 className="font-[Untitled] text-[20px] text-(--mainColor)">Warenkorb</h2>
@@ -70,13 +70,13 @@ export default function Checkout() {
 
                 <div className="flex flex-col gap-4">
                     {items.map(item => (
-                        <div key={item.itemId} className="flex flex-row gap-4 items-center">
+                        <div key={item.itemId} className="flex flex-row gap-3 lg:gap-4 items-center">
                             <img
                                 src={item?.urls?.small}
                                 alt={item?.alt_description}
-                                className="w-24 h-24 object-cover rounded-md"
+                                className="w-16 h-16 lg:w-24 lg:h-24 shrink-0 object-cover rounded-md"
                             />
-                            <div className="flex flex-col gap-1 font-[Untitled] text-(--mainColor) text-[16px]">
+                            <div className="flex flex-col gap-1 min-w-0 break-words font-[Untitled] text-(--mainColor) text-[14px] lg:text-[16px]">
                                 <p>{item?.user?.name}</p>
                                 <p>"{item?.alt_description}"</p>
                                 <p>{item?.size}</p>
@@ -92,7 +92,7 @@ export default function Checkout() {
                     Gesamt: €{total}
                 </p>
 
-                <div className="flex flex-row gap-3 mb-6">
+                <div className="flex flex-row gap-2 lg:gap-3 mb-6">
                     {[
                         { name: "PayPal", src: "/icons/PayPal.png" },
                         { name: "Klarna", src: "/icons/Klarna.webp" },
@@ -114,7 +114,7 @@ export default function Checkout() {
 
                 <button
                     onClick={handleOrder}
-                    className="font-[Untitled] text-[18px] opacity-80 font-light uppercase p-3 rounded-md w-42 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-(--mainColor)/5 border border-(--mainColor)/20 shadow-lg transition-all duration-300 hover:bg-(--mainColor)/10 hover:scale-[1.03] active:scale-[0.98]"
+                    className="font-[Untitled] text-[18px] opacity-80 font-light uppercase p-3 rounded-md w-full lg:w-42 h-10 flex items-center justify-center text-(--mainColor) backdrop-blur-md bg-(--mainColor)/5 border border-(--mainColor)/20 shadow-lg transition-all duration-300 hover:bg-(--mainColor)/10 hover:scale-[1.03] active:scale-[0.98]"
                 >
                     Kaufen
                 </button>
