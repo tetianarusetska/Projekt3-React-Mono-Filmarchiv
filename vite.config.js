@@ -7,4 +7,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      '/api': 'https://projekt3-react-mono-filmarchiv.vercel.app'
+    }
+  }
 })
