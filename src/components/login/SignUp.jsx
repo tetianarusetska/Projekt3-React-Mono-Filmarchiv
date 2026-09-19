@@ -18,7 +18,17 @@ export default function SignUp() {
             await createUserWithEmailAndPassword(auth, email, password);
             console.log("Anmeldung erfolgreich!")
         } catch (err) {
-            setError("Anmeldung fehlgeschlagen!");
+            console.error(err.code, err.message)
+
+            const messages = {
+                "auth/email-already-in-use": "Diese E-Mail ist bereits registriert.",
+                "auth/invalid-email": "Die E-Mail-Adresse ist ungültig.",
+                "auth/weak-password": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+                "auth/operation-not-allowed": "E-Mail/Passwort-Anmeldung ist in Firebase nicht aktiviert.",
+                "auth/password-does-not-meet-requirements": "Das Passwort erfüllt die Anforderungen nicht.",
+                "auth/network-request-failed": "Netzwerkfehler. Bitte später erneut versuchen.",
+            }
+            setError(messages[err.code] || `Anmeldung fehlgeschlagen (${err.code})`)
         }
     }
 

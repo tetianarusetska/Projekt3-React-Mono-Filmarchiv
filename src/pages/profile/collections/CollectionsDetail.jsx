@@ -78,12 +78,12 @@ export default function CollectionsDetail() {
                     <div
                         key={foto.photoId}
                         onClick={() => openPhoto(foto)}
-                        className="relative h-120 border border-(--mainColor) flex items-center justify-center text-(--mainColor) rounded-2xl"
+                        className="relative h-120 border border-(--mainColor) flex items-center justify-center text-(--mainColor) rounded-2xl overflow-hidden cursor-pointer"
                     >
                         <img
                             src={foto.urls?.regular}
                             alt={foto.alt_description}
-                            className="w-full h-full object-contain rounded-2xl"
+                            className="w-full h-full object-contain lg:rounded-2xl"
                         />
                         <div
                             className="absolute bottom-3 right-3"
