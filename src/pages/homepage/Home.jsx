@@ -30,31 +30,38 @@ export default function Home() {
 
     return (
         <>
-            <Hero />
-            <TextSection
-                label="Über das Archiv"
-                quote="Fotografie. Erinnerung. Zeit. Ein kuratiertes Archiv aus Bildern, Essays und Fine-Art-Prints."
-            />
-            <FeaturedPhoto1 />
-            <TextSection
-                label="Archiv"
-                quote="Mehr als nur Fotografien. Eine Sammlung von Menschen, Orten und Augenblicken, die über Jahre hinweg festgehalten wurden."
-            />
-            <TextSection
-                label="Sammlungen"
-                quote="Speichere deine Lieblingsbilder und stelle persönliche Kollektionen zusammen."
-            />
-            <FeaturedPhoto2 />
-            <TextSection
-                label="Prints"
-                quote="Ausgewählte Fotografien als hochwertige Fine-Art-Prints erhältlich."
-            />
-            <TextSection
-                label="Geschichten"
-                quote="Hinter jedem Bild steckt mehr als ein Augenblick. Entdecke Essays, Interviews und fotografische Notizen."
-            />
-            <FooterIntro />
-            <Footer />
+            <div className='h-full'>
+                <Hero />
+                <TextSection
+                    label="Über das Archiv"
+                    quote="Fotografie. Erinnerung. Zeit. Ein kuratiertes Archiv aus Bildern, Essays und Fine-Art-Prints."
+                    className="min-h-[40vh] py-10 -translate-y-70 lg:translate-y-0 lg:min-h-[80vh] lg:py-0"
+                />
+                <FeaturedPhoto1 className="h-[280vh] -mt-[50vh] lg:h-[300vh] lg:mt-0" />
+                <TextSection
+                    label="Archiv"
+                    quote="Mehr als nur Fotografien. Eine Sammlung von Menschen, Orten und Augenblicken, die über Jahre hinweg festgehalten wurden."
+                    className="min-h-[40vh] py-10 -translate-y-180 lg:translate-y-0 lg:min-h-[80vh] lg:py-0"
+                />
+                <TextSection
+                    label="Sammlungen"
+                    quote="Speichere deine Lieblingsbilder und stelle persönliche Kollektionen zusammen."
+                    className="min-h-[40vh] py-10 -translate-y-160 mb-80 lg:translate-y-0 lg:min-h-[80vh] lg:py-0 lg:mb-0"
+                />
+                <FeaturedPhoto2 className="hidden lg:block lg:h-[300vh]" />
+                <TextSection
+                    label="Prints"
+                    quote="Ausgewählte Fotografien als hochwertige Fine-Art-Prints erhältlich."
+                    className="hidden lg:flex lg:min-h-[80vh]"
+                />
+                <TextSection
+                    label="Geschichten"
+                    quote="Hinter jedem Bild steckt mehr als ein Augenblick. Entdecke Essays, Interviews und fotografische Notizen."
+                    className="hidden lg:flex lg:min-h-[80vh]"
+                />
+                <FooterIntro />
+                <Footer />
+            </div>
         </>
     );
 }

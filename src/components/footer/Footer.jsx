@@ -3,7 +3,7 @@ import Content from './Content.jsx'
 export default function Footer() {
   return (
     <div 
-        className='relative h-200'
+        className='hidden lg:block relative h-200'
         style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}     //clipPath schneidet das Bild von unten nach oben weg
     >
         <div className='relative h-[calc(100vh+800px)] top-[-100vh]'>

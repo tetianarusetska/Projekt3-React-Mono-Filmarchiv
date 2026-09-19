@@ -2,7 +2,7 @@ import { useState, useRef, useLayoutEffect } from "react"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-export default function FeaturedPhoto1() {
+export default function FeaturedPhoto1({ className="" }) {
 
     const container = useRef(null);
     const imageContainer = useRef(null);
@@ -56,7 +56,7 @@ export default function FeaturedPhoto1() {
     return (
         <div
             ref={container}
-            className="h-[300vh] w-screen"
+            className={`w-screen ${className}`}
         >
             <div
                 ref={imageContainer}

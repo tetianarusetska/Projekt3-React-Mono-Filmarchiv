@@ -36,15 +36,15 @@ export default function TextSection({ label, quote, author, className = "" }) {
     return (
         <div
             ref={container}
-            className="w-screen min-h-[80vh] flex flex-col justify-center items-center px-8 md:px-24 text-center"
+            className={`w-screen flex flex-col justify-center items-center px-8 md:px-24 text-center ${className}`}
         >
-            <div ref={text} className="max-w-4xl">
+            <div ref={text} className="max-w-4xl mx-auto">
                 {label && (
-                    <p className="mb-4 text-[12px] md:text-[14px] font-light font-[Untitled] tracking-[0.2em] uppercase opacity-60">
+                    <p className="mb-4 text-[12px] md:text-[14px] font-light font-[Untitled] tracking-[0.2em] uppercase opacity-60 ">
                         {label}
                     </p>
                 )}
-                <p className={`text-[28px] md:text-[40px] font-light leading-snug ${className || "font-[Untitled]"}`}>
+                <p className="text-[28px] md:text-[40px] font-light leading-snug font-[Untitled]">
                     {quote}
                 </p>
                 {author && (
