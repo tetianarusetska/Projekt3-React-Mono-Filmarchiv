@@ -3,7 +3,7 @@
 ## Tech Stack
 
 ### Frontend
-React (Vite), React Router (Client-Side Routing), Tailwind CSS, Framer Motion & GSAP (Animationen), Lenis (Smooth Scroll) 
+React (Vite), React Router (Client-Side Routing), Tailwind CSS, Framer Motion & GSAP (Animationen), Lenis (Smooth Scroll)  
 
 ### Backend
 Firebase Authentication (E-Mail/Passwort), Firestore (Echtzeit-Datenbank), Unsplash API (Fotos & Fotografen-Daten), News API (Artikel)
